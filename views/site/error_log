@@ -1,0 +1,4 @@
+[14-Mar-2017 01:31:17 Europe/Kiev] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/h7111c/bt3.uniq-st.com/views/site/index.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/h7111c/bt3.uniq-st.com/views/site/index.php on line 5

@@ -1,0 +1,177 @@
+[21-Mar-2017 15:54:20 Europe/Kiev] PHP Fatal error:  Class 'app\components\CategoryWidget' not found in /home/h7111c/bt2.uniq-st.com/views/site/about.php on line 15
+[21-Mar-2017 15:54:24 Europe/Kiev] PHP Fatal error:  Class 'app\components\CategoryWidget' not found in /home/h7111c/bt2.uniq-st.com/views/site/about.php on line 15
+[21-Mar-2017 15:54:52 Europe/Kiev] PHP Fatal error:  Class 'app\components\CategoryWidget' not found in /home/h7111c/bt2.uniq-st.com/views/site/about.php on line 15
+[21-Mar-2017 18:41:09 Europe/Kiev] PHP Fatal error:  Class 'app\controllers\Product' not found in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 17
+[21-Mar-2017 18:41:33 Europe/Kiev] PHP Fatal error:  Class 'app\controllers\Product' not found in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 17
+[21-Mar-2017 18:41:33 Europe/Kiev] PHP Fatal error:  Class 'app\controllers\Product' not found in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 17
+[21-Mar-2017 18:42:06 Europe/Kiev] PHP Fatal error:  Class 'app\controllers\Product' not found in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 17
+[21-Mar-2017 18:42:07 Europe/Kiev] PHP Fatal error:  Class 'app\controllers\Product' not found in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 17
+[21-Mar-2017 18:44:20 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:44:21 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:44:23 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:44:24 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:44:36 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:44:38 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:44:39 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:44:40 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:04 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:06 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:07 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:07 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:07 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:07 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:07 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:07 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:08 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:08 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:08 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:29 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:31 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:49 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:50 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:45:53 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:46:00 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:46:01 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:46:12 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 18:46:14 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']' in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 3
+[21-Mar-2017 23:03:51 Europe/Kiev] PHP Fatal error:  Class 'app\controllers\Cart' not found in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 22
+[21-Mar-2017 23:03:54 Europe/Kiev] PHP Fatal error:  Class 'app\controllers\Cart' not found in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 22
+[21-Mar-2017 23:03:58 Europe/Kiev] PHP Fatal error:  Class 'app\controllers\Cart' not found in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 22
+[21-Mar-2017 23:04:27 Europe/Kiev] PHP Fatal error:  Class 'app\controllers\Cart' not found in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 22
+[21-Mar-2017 23:04:35 Europe/Kiev] PHP Fatal error:  Class 'app\controllers\Cart' not found in /home/h7111c/bt2.uniq-st.com/controllers/CartController.php on line 22
+[21-Mar-2017 23:17:40 Europe/Kiev] PHP Parse error:  syntax error, unexpected '}' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 13
+[21-Mar-2017 23:17:48 Europe/Kiev] PHP Parse error:  syntax error, unexpected '}' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 13
+[21-Mar-2017 23:18:02 Europe/Kiev] PHP Parse error:  syntax error, unexpected '}' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 13
+[21-Mar-2017 23:18:51 Europe/Kiev] PHP Parse error:  syntax error, unexpected '}' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 13
+[21-Mar-2017 23:19:43 Europe/Kiev] PHP Parse error:  syntax error, unexpected '}' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 13
+[21-Mar-2017 23:20:39 Europe/Kiev] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 24
+[21-Mar-2017 23:22:41 Europe/Kiev] PHP Parse error:  syntax error, unexpected '}' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 13
+[21-Mar-2017 23:22:47 Europe/Kiev] PHP Parse error:  syntax error, unexpected '}' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 13
+[21-Mar-2017 23:28:09 Europe/Kiev] PHP Parse error:  syntax error, unexpected '}' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 13
+[21-Mar-2017 23:28:36 Europe/Kiev] PHP Parse error:  syntax error, unexpected '}' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 13
+[21-Mar-2017 23:29:27 Europe/Kiev] PHP Parse error:  syntax error, unexpected '}' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 13
+[21-Mar-2017 23:30:17 Europe/Kiev] PHP Parse error:  syntax error, unexpected '}' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 13
+[21-Mar-2017 23:41:52 Europe/Kiev] PHP Warning:  Uncaught exception 'yii\base\ErrorException' with message 'Illegal string offset 'qty'' in /home/h7111c/bt2.uniq-st.com/models/Cart.php:12
+Stack trace:
+#0 /home/h7111c/bt2.uniq-st.com/models/Cart.php(12): yii\base\ErrorHandler->handleError(2, 'Illegal string ...', '/home/h7111c/bt...', 12, Array)
+#1 /home/h7111c/bt2.uniq-st.com/controllers/CartController.php(24): app\models\Cart->addToCart(Object(app\models\Product))
+#2 [internal function]: app\controllers\CartController->actionAdd()
+#3 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('add', Array)
+#6 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('cart/add', Array)
+#7 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[21-Mar-2017 23:41:52 Europe/Kiev] PHP Fatal error:  Cannot use assign-op operators with overloaded objects nor string offsets in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[21-Mar-2017 23:41:52 Europe/Kiev] PHP Warning:  Uncaught exception 'yii\base\ErrorException' with message 'Illegal string offset 'qty'' in /home/h7111c/bt2.uniq-st.com/models/Cart.php:12
+Stack trace:
+#0 /home/h7111c/bt2.uniq-st.com/models/Cart.php(12): yii\base\ErrorHandler->handleError(2, 'Illegal string ...', '/home/h7111c/bt...', 12, Array)
+#1 /home/h7111c/bt2.uniq-st.com/controllers/CartController.php(24): app\models\Cart->addToCart(Object(app\models\Product))
+#2 [internal function]: app\controllers\CartController->actionAdd()
+#3 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('add', Array)
+#6 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('cart/add', Array)
+#7 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[21-Mar-2017 23:41:52 Europe/Kiev] PHP Fatal error:  Cannot use assign-op operators with overloaded objects nor string offsets in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[21-Mar-2017 23:44:00 Europe/Kiev] PHP Warning:  Uncaught exception 'yii\base\ErrorException' with message 'Illegal string offset 'qty'' in /home/h7111c/bt2.uniq-st.com/models/Cart.php:12
+Stack trace:
+#0 /home/h7111c/bt2.uniq-st.com/models/Cart.php(12): yii\base\ErrorHandler->handleError(2, 'Illegal string ...', '/home/h7111c/bt...', 12, Array)
+#1 /home/h7111c/bt2.uniq-st.com/controllers/CartController.php(24): app\models\Cart->addToCart(Object(app\models\Product))
+#2 [internal function]: app\controllers\CartController->actionAdd()
+#3 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('add', Array)
+#6 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('cart/add', Array)
+#7 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[21-Mar-2017 23:44:00 Europe/Kiev] PHP Fatal error:  Cannot use assign-op operators with overloaded objects nor string offsets in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[21-Mar-2017 23:47:59 Europe/Kiev] PHP Warning:  Uncaught exception 'yii\base\ErrorException' with message 'Illegal string offset 'qty'' in /home/h7111c/bt2.uniq-st.com/models/Cart.php:12
+Stack trace:
+#0 /home/h7111c/bt2.uniq-st.com/models/Cart.php(12): yii\base\ErrorHandler->handleError(2, 'Illegal string ...', '/home/h7111c/bt...', 12, Array)
+#1 /home/h7111c/bt2.uniq-st.com/controllers/CartController.php(24): app\models\Cart->addToCart(Object(app\models\Product))
+#2 [internal function]: app\controllers\CartController->actionAdd()
+#3 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('add', Array)
+#6 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('cart/add', Array)
+#7 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[21-Mar-2017 23:47:59 Europe/Kiev] PHP Fatal error:  Cannot use assign-op operators with overloaded objects nor string offsets in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[22-Mar-2017 00:36:52 Europe/Kiev] PHP Warning:  Uncaught exception 'yii\base\ErrorException' with message 'Illegal string offset 'qty'' in /home/h7111c/bt2.uniq-st.com/models/Cart.php:12
+Stack trace:
+#0 /home/h7111c/bt2.uniq-st.com/models/Cart.php(12): yii\base\ErrorHandler->handleError(2, 'Illegal string ...', '/home/h7111c/bt...', 12, Array)
+#1 /home/h7111c/bt2.uniq-st.com/controllers/CartController.php(24): app\models\Cart->addToCart(Object(app\models\Product))
+#2 [internal function]: app\controllers\CartController->actionAdd()
+#3 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('add', Array)
+#6 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('cart/add', Array)
+#7 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[22-Mar-2017 00:36:52 Europe/Kiev] PHP Fatal error:  Cannot use assign-op operators with overloaded objects nor string offsets in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[22-Mar-2017 00:37:33 Europe/Kiev] PHP Warning:  Uncaught exception 'yii\base\ErrorException' with message 'Illegal string offset 'qty'' in /home/h7111c/bt2.uniq-st.com/models/Cart.php:12
+Stack trace:
+#0 /home/h7111c/bt2.uniq-st.com/models/Cart.php(12): yii\base\ErrorHandler->handleError(2, 'Illegal string ...', '/home/h7111c/bt...', 12, Array)
+#1 /home/h7111c/bt2.uniq-st.com/controllers/CartController.php(24): app\models\Cart->addToCart(Object(app\models\Product))
+#2 [internal function]: app\controllers\CartController->actionAdd()
+#3 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('add', Array)
+#6 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('cart/add', Array)
+#7 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[22-Mar-2017 00:37:33 Europe/Kiev] PHP Fatal error:  Cannot use assign-op operators with overloaded objects nor string offsets in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[22-Mar-2017 00:44:19 Europe/Kiev] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[22-Mar-2017 00:45:00 Europe/Kiev] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[22-Mar-2017 00:45:05 Europe/Kiev] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[22-Mar-2017 00:46:24 Europe/Kiev] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[22-Mar-2017 00:48:22 Europe/Kiev] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[22-Mar-2017 00:48:35 Europe/Kiev] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 12
+[22-Mar-2017 00:50:17 Europe/Kiev] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 14
+[22-Mar-2017 02:20:12 Europe/Kiev] PHP Fatal error:  Class 'Product' not found in /home/h7111c/bt2.uniq-st.com/views/cart/cart-model.php on line 37
+[22-Mar-2017 03:26:16 Europe/Kiev] PHP Parse error:  syntax error, unexpected '{' in /home/h7111c/bt2.uniq-st.com/views/cart/cart-model.php on line 15
+[22-Mar-2017 13:29:25 Europe/Kiev] PHP Fatal error:  Class 'yii\bootstrap\Midal' not found in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 71
+[22-Mar-2017 13:29:26 Europe/Kiev] PHP Fatal error:  Class 'yii\bootstrap\Midal' not found in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 71
+[22-Mar-2017 13:29:38 Europe/Kiev] PHP Fatal error:  Class 'Modal' not found in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 71
+[22-Mar-2017 13:29:39 Europe/Kiev] PHP Fatal error:  Class 'Modal' not found in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 71
+[22-Mar-2017 14:16:17 Europe/Kiev] PHP Fatal error:  Uncaught exception 'yii\base\InvalidConfigException' with message 'The "id" configuration for the Application is required.' in /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Application.php:220
+Stack trace:
+#0 /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Application.php(202): yii\base\Application->preInit(1)
+#1 /home/h7111c/bt2.uniq-st.com/web/index.php(12): yii\base\Application->__construct(1)
+#2 {main}
+  thrown in /home/h7111c/bt2.uniq-st.com/vendor/yiisoft/yii2/base/Application.php on line 220
+[22-Mar-2017 15:25:28 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:25:29 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:25:31 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:27:21 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:27:22 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:27:24 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:17 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:19 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:22 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:26 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:29 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:29 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:32 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:34 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:36 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:37 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:41 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:47 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:51 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:53 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:28:56 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:29:29 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:29:33 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:29:35 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:29:44 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:31:46 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:31:48 Europe/Kiev] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ')' in /home/h7111c/bt2.uniq-st.com/models/Cart.php on line 35
+[22-Mar-2017 15:49:41 Europe/Kiev] PHP Parse error:  syntax error, unexpected '=', expecting ']' in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 46
+[22-Mar-2017 15:49:43 Europe/Kiev] PHP Parse error:  syntax error, unexpected '=', expecting ']' in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 46
+[22-Mar-2017 17:05:08 Europe/Kiev] PHP Fatal error:  Class 'yii\helper\Url' not found in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 77
+[22-Mar-2017 17:06:23 Europe/Kiev] PHP Fatal error:  Class 'yii\helper\Url' not found in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 78
+[22-Mar-2017 17:07:03 Europe/Kiev] PHP Parse error:  syntax error, unexpected '.' in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 78
+[22-Mar-2017 17:09:19 Europe/Kiev] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 78
+[22-Mar-2017 17:09:44 Europe/Kiev] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 78
+[22-Mar-2017 17:10:16 Europe/Kiev] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 79
+[22-Mar-2017 17:10:20 Europe/Kiev] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 79
+[22-Mar-2017 17:10:24 Europe/Kiev] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 79
+[22-Mar-2017 17:10:26 Europe/Kiev] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 79
+[22-Mar-2017 17:12:23 Europe/Kiev] PHP Fatal error:  Class 'yii\helper\Url' not found in /home/h7111c/bt2.uniq-st.com/views/layouts/main.php on line 78
