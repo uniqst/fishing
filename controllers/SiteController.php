@@ -151,6 +151,12 @@ class SiteController extends Controller
             'product' => $product,
             ]);
     }
+
+     public function actionAdd()
+    {
+     $id = Yii::$app->request->get('id');
+     echo $id;
+    }
     
 
 }
