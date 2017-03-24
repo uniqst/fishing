@@ -57,9 +57,8 @@ AppAsset::register($this);
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
-
+        
         <?= $content ?>
-<h2>World</h2>
 
     </div>
 </div>
