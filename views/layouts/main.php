@@ -59,7 +59,7 @@ AppAsset::register($this);
         ]) ?>
 
         <?= $content ?>
-
+<h2>World</h2>
 
     </div>
 </div>
