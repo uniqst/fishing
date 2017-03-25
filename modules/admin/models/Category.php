@@ -41,9 +41,9 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'parent_id' => 'Parent ID',
-            'img' => 'Img',
-            'name' => 'Name',
+            'parent_id' => 'Родительский ID',
+            'img' => 'Картинка',
+            'name' => 'Название',
         ];
     }
 }
