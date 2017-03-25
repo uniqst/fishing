@@ -8,7 +8,7 @@ function showCart(cart){
 function getCart(){
 	return false;
 	$.ajax({
-		url: '/cart/show',
+		url: '/web/cart/show',
 		type: 'GET',
 		success: function(res){
 			if(!res) alert('Ошибка');
@@ -23,7 +23,7 @@ function getCart(){
 $('#cart .modal-body').on('click', '.del-item', function(){
 	var id = $(this).data('id');
 	$.ajax({
-		url: '/cart/del-item',
+		url: '/web/cart/del-item',
 		data: {id: id},
 		type: 'GET',
 		success: function(res){
@@ -38,7 +38,7 @@ $('#cart .modal-body').on('click', '.del-item', function(){
 
 function clearCart(){
 	$.ajax({
-		url: '/cart/clear',
+		url: '/web/cart/clear',
 		type: 'GET',
 		success: function(res){
 			if(!res) alert('Ошибка');
@@ -57,7 +57,7 @@ $('.add-to-cart').on('click', function (e){
 	var id = $(this).data('id');
 	qty = $('#qty'+ id).val();
 	$.ajax({
-		url: '/cart/add',
+		url: '/web/cart/add',
 		data: {id: id, qty: qty},
 		type: 'GET',
 		success: function(res){
