@@ -5,6 +5,21 @@ use yii\widgets\ActiveForm;
 $this->title = 'Корзина';
 ?>
 <div class="container">
+
+<?php if( Yii::$app->session->hasflash('success')):?>
+	<div class="alert alert-success alert-dismissible" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-lable="Close"><span aria-hidden="true">&times;</span></button>
+	<?php echo Yii::$app->session->getFlash('success');?>
+	</div>
+<?php endif;?>
+
+<?php if( Yii::$app->session->hasflash('error')):?>
+	<div class="alert alert-success alert-dismissible" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-lable="Close"><span aria-hidden="true">&times;</span></button>
+	<?php echo Yii::$app->session->getFlash('error');?>
+	</div>
+<?php endif;?>
+
 <?php if(!empty($session['cart'])):?>
       <div class="table-responsive">
       	<table class="table table-hover table-stried">

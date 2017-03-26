@@ -3,7 +3,8 @@
 namespace app\models;
 use \yii\db\ActiveRecord;
 use Yii;
-use yii\behaviors\TimestampBehav;
+use yii\behaviors\TimestampBehavior;
+use yii\db\Expression;
 /**
  * This is the model class for table "order".
  *
@@ -37,13 +38,13 @@ class Order extends ActiveRecord
                     ActiveRecord::EVENT_BEFORE_UPDATE => ['update_at'],
                 ],
                 // если вместо метки времени UNIX используется datetime:
-                // 'value' => new Expression('NOW()'),
+                'value' => new Expression('NOW()'),
             ],
         ];
     }
 
     public function getOrderItem(){
-        // return $this->hasOne(OrderItem::className()), ['order_id' => 'id']);
+        return $this->hasOne(OrderItem::className(), ['order_id' => 'id']);
     }
 
     /**
