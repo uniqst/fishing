@@ -29,11 +29,11 @@ $this->title = 'Корзина';
       	 			</tr>
       	 			<?php endforeach;?>
       	 			<tr>
-      	 				<td colspan="4">Итого</td>
+      	 				<td colspan="5">Итого</td>
       	 				<td><?= $session['cart.qty']?></td>
       	 			</tr>
       	 			<tr>
-      	 				<td colspan="4">Сума</td>
+      	 				<td colspan="5">Сума</td>
       	 				<td><?= $session['cart.sum']?></td>
       	 			</tr>
       	 		</tbody>
