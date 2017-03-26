@@ -9,6 +9,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Product;
+use app\models\Order;
+use app\models\OrderItem;
 use app\models\Cart;
 
 class CartController extends Controller
@@ -66,7 +68,11 @@ class CartController extends Controller
 
     public function actionView()
     {
-        return $this->render('view');
+        $session = Yii::$app->session;
+        $session->open();
+        $this->setMeta('Корзина');
+        $order = new Order();
+        return $this->render('view', compact('session', 'order'));
     }
 
 }
