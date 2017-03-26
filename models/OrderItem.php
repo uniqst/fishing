@@ -1,7 +1,7 @@
 <?php
 
 namespace app\models;
-use \yii\db\ActiveRecord;
+use \yii\db\ActiveRecord
 use Yii;
 
 /**
@@ -25,6 +25,10 @@ class OrderItem extends ActiveRecord
         return 'order_item';
     }
 
+      public function getOrder(){
+        return $this->hasOne(Order::className()), 'id' => 'order_id');
+    }
+
     /**
      * @inheritdoc
      */
@@ -38,19 +42,4 @@ class OrderItem extends ActiveRecord
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function attributeLabels()
-    {
-        return [
-            'id' => 'ID',
-            'order_id' => 'Order ID',
-            'product_id' => 'Product ID',
-            'name' => 'Name',
-            'price' => 'Price',
-            'qty_item' => 'Qty Item',
-            'sum_item' => 'Sum Item',
-        ];
-    }
 }
