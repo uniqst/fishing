@@ -70,8 +70,10 @@ class CartController extends Controller
     {
         $session = Yii::$app->session;
         $session->open();
-        $this->setMeta('Корзина');
         $order = new Order();
+        if ($order->load(Yii::$app->request->post())) {
+            print_r($_POST);
+        }
         return $this->render('view', compact('session', 'order'));
     }
 

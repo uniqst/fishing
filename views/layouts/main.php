@@ -73,7 +73,7 @@ AppAsset::register($this);
      	'id' => 'cart',
      	'size' => 'modal-lg',
      	'footer' => '<button class="btn btn-default">Продолжить покупеки</button>
-        <a href="/web/cart/view" class="btn btn-success">Оформить заказ</a>
+        <a href="/cart/view" class="btn btn-success">Оформить заказ</a>
         <button class="btn btn-danger" onclick="clearCart()" >Очистить корзину</button>'
      	]);
      Modal::End();

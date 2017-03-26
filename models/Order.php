@@ -29,7 +29,7 @@ class Order extends ActiveRecord
     }
 
     public function getOrderItem(){
-        return $this->hasMany(OrderItem::className()), 'order_id' => 'id');
+        // return $this->hasOne(OrderItem::className()), ['order_id' => 'id']);
     }
 
     /**
