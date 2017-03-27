@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
        <?php foreach($product as $prod){?>
          <div class="col-md-3 items">
          <a href="<?= Url::to(['site/single-product', 'id' => $prod->id]);?>"><img class="qqq" src="<?php echo $prod->photo;?>" /></a>
-          <h2><?php echo $prod->name;?></h2>
+         <a href="<?= Url::to(['site/single-product', 'id' => $prod->id]);?>" style="text-decoration: none;"><h2><?= $prod->name?></h2></a>
           <p>Цена: <?= $prod->price?></p>
           <lable>Количество:</lable>
           <input type="text" value="1" id="qty<?= $prod->id?>" />

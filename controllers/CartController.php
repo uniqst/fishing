@@ -72,8 +72,8 @@ class CartController extends Controller
         $session->open();
         $order = new Order();
         if ($order->load(Yii::$app->request->post())) {
-            $order->qty = $session['cart.qty'];
-            $order->sum = $session['cart.sum'];
+            // $order->qty = $session['cart.qty'];
+            // $order->sum = $session['cart.sum'];
         }
         return $this->render('view', compact('session', 'order'));
     }
