@@ -152,10 +152,16 @@ class SiteController extends Controller
             ]);
     }
 
-     public function actionAdd()
+     public function actionSingleProduct()
     {
      $id = Yii::$app->request->get('id');
-     echo $id;
+     $prod = Product::find()->where(['id' => $id])->one();
+     return $this->render('single-product', [
+        'id' => $id,
+        'prod' => $prod,
+        'title' => $prod->name,
+        ]);
+
     }
     
 
