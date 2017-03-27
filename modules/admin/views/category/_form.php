@@ -19,7 +19,7 @@ $items = ArrayHelper::map($cats,'id','name');
 
     <?= $form->field($model,'parent_id')->dropDownList($items);?>
 
-    <?= $form->field($model, 'img')->fileInput(['multiple'=>'multiple']); ?>
+    <?= $form->field($model, 'img')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
