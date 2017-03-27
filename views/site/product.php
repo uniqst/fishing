@@ -5,6 +5,7 @@
 /* @var $model app\models\ContactForm */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->title = 'Продукты';
 $this->params['breadcrumbs'][] = $this->title;
@@ -15,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
        <?php foreach($product as $prod){?>
          <div class="col-md-3 items">
-         <img class="qqq" src="<?php echo $prod->photo;?>" />
+         <a href="<?= Url::to(['site/single-product', 'id' => $prod->id]);?>"><img class="qqq" src="<?php echo $prod->photo;?>" /></a>
           <h2><?php echo $prod->name;?></h2>
           <p>Цена: <?= $prod->price?></p>
           <lable>Количество:</lable>
