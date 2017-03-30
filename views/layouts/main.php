@@ -12,7 +12,6 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\models\Category;
 use app\components\CategoryWidget;
-//dfdfdf
 
 AppAsset::register($this);
 ?>
