@@ -32,8 +32,8 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
-<nav class="navbar navbar-default">
+<div class="wrap container">
+<nav class="navbar container">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -43,24 +43,24 @@ AppAsset::register($this);
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">ABC Fishing</a>
+      <a class="navbar-brand" href="/">ABC Fishing</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
    
          <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Акции</a></li>
-        <li><a href="#">О магазине</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="/">Главная</a></li>
+        <li><a href="<?=Url::to(['site/promotions'])?>">Акции</a></li>
+        <li><a href="<?=Url::to(['site/about'])?>">О магазине</a></li>
+        <li><a href="<?=Url::to(['site/contact'])?>">Контакты</a></li>
 
       </ul>
       <form class="navbar-form navbar-right">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Поиск">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">Искать</button>
       </form>
    
     </div><!-- /.navbar-collapse -->
@@ -100,10 +100,13 @@ AppAsset::register($this);
 <!--     <a href="#" onclick="return getCart()">Корзина</a> -->
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
+        ])  ?>
+
+
         <div class="row">
         <div class="col-md-3">
-        <ul class="catalog">
+        <ul class="catalog sidebar-catalog">
+        <li><a href="">Каталог</a></li>
         <?=CategoryWidget::widget(['tpl'=>'menu'])?>
         </ul>
 

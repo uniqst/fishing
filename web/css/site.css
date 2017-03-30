@@ -34,6 +34,11 @@ body {
     background-color: greenyellow;
     color: white;
 }
+
+.items .qqq{
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
         /*items*/
 
 
@@ -47,6 +52,9 @@ body {
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
+    border: 2px 2px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
 }
 
 /*.wrap > .container {
@@ -156,4 +164,20 @@ a.desc:after {
 .mainnav li{
     list-style-type: none;
     display: inline-block;
+}
+
+.sidebar-catalog{
+    list-style-type: none;
+    border: 2px solid grey;
+    background: #473a06;
+
+    min-height: 74vh;
+}
+
+.sidebar-catalog li{
+    margin-left: -20px;
+}
+
+.sidebar-catalog li a{
+    color: white;
 }
