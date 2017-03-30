@@ -4,12 +4,14 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\bootstrap\Modal;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\models\Category;
+use app\components\CategoryWidget;
 //dfdfdf
 
 AppAsset::register($this);
@@ -32,33 +34,85 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => 'ABC Fishing',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'Главная', 'url' => ['/site/index']],
-            ['label' => 'Акции', 'url' => ['/site/promotions']],
-            ['label' => 'О магазине', 'url' => ['/site/about']],
-            ['label' => 'Контакты', 'url' => ['/site/contact']],
+<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">ABC Fishing</a>
+    </div>
 
-        ],
-    ]);
-    NavBar::end();
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+   
+         <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Акции</a></li>
+        <li><a href="#">О магазине</a></li>
+        <li><a href="#">Контакты</a></li>
+
+      </ul>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Поиск">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+   
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+    <?php
+    // NavBar::begin([
+    //     'brandLabel' => 'ABC Fishing',
+    //     'brandUrl' => Yii::$app->homeUrl,
+    //     'options' => [
+    //         'class' => 'navbar-inverse navbar-fixed-top',
+    //     ],
+    // ]);
+    // echo Nav::widget([
+    //     'options' => ['class' => 'navbar-nav navbar-right'],
+    //     'items' => [
+    //         ['label' => 'Главная', 'url' => [Yii::$app->homeUrl]],
+    //         ['label' => 'Акции', 'url' => ['/site/promotions']],
+    //         ['label' => 'О магазине', 'url' => ['/site/about']],
+    //         ['label' => 'Контакты', 'url' => ['/site/contact']],
+
+    //     ],
+    // ]);
+    // NavBar::end();
+
+    $category = Category::find()->where(['parent_id' => '0'])->all();
     ?>
     <div class="container">
-    <a href="#" onclick="return getCart()">Корзина</a>
+       <div class="btn-group btn-group-justified">
+    <?php foreach($category as $cat):?>
+        <a href="<?=Url::to(['catalog', 'id' => $cat->id])?>" class="btn btn-warning btn-lg"><?=$cat->name?></a>
+    <?php endforeach;?>
+       </div>
+      <!-- /input-group -->
+<!--     <a href="#" onclick="return getCart()">Корзина</a> -->
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
+        <div class="row">
+        <div class="col-md-3">
+        <ul class="catalog">
+        <?=CategoryWidget::widget(['tpl'=>'menu'])?>
+        </ul>
 
+        </div>
+        <div class="col-md-9">
         <?= $content ?>
+        </div>
+        </div>
     </div>
 </div>
 

@@ -50,7 +50,8 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                
+                'single-product/<id:\d+>' => 'single-product',
+                '<action>' => 'site/<action>' , 
             ],
         ],
         

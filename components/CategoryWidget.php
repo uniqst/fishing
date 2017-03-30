@@ -4,7 +4,7 @@ namespace app\components;
 use yii\base\Widget;
 use yii\helpers\Html;
 use app\models\Category;
-
+use yii\helpers\Url;
 
 
 class CategoryWidget extends Widget

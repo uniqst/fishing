@@ -49,10 +49,10 @@ body {
     padding: 0 0 60px;
 }
 
-.wrap > .container {
+/*.wrap > .container {
     padding: 70px 15px 20px;
 }
-
+*/
 .footer {
     height: 60px;
     background-color: #f5f5f5;
@@ -151,4 +151,9 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+
+.mainnav li{
+    list-style-type: none;
+    display: inline-block;
 }
