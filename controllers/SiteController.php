@@ -171,6 +171,23 @@ class SiteController extends Controller
         ]);
 
     }
+
+     public function actionSearch()
+     {
+        $q = Yii::$app->request->get('q');
+        $query = Product::find()->where(['like', 'name', $q]);
+        $pages = new Pagination([
+            'totalCount' => $query->count(),
+            'pageSize' => 4,
+            'forcePageParam' => false,
+            'pageSizeParam' => false
+         ]);
+        $product = $query
+        ->offset($pages->offset)
+        ->limit($pages->limit)
+        ->all(); 
+        return $this->render('search', compact('product', 'pages', 'q'));
+     }
     
 
 }

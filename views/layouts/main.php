@@ -56,9 +56,9 @@ AppAsset::register($this);
         <li><a href="<?=Url::to(['site/contact'])?>">Контакты</a></li>
 
       </ul>
-      <form class="navbar-form navbar-right">
+      <form class="navbar-form navbar-right" action="<?=Url::to(['site/search'])?>" method="get">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Поиск">
+          <input type="text" class="form-control" placeholder="Поиск" name="q">
         </div>
         <button type="submit" class="btn btn-default">Искать</button>
       </form>
