@@ -76,7 +76,7 @@ class SiteController extends Controller
         ->offset($pagination->offset)
         ->limit($pagination->limit)
         ->all();
-        // $category = Category::find()->where(['parent_id' => '0'])->all();
+      
         return $this->render('index', compact('product','pagination'));
     }
 
@@ -145,12 +145,14 @@ class SiteController extends Controller
         return $this->render('promotions');
     }
 
-    public function actionCatalog()
+    public function actionCatalog($id)
     {
-        $category = Category::find()->all();
-        return $this->render('catalog',[
-            'category' => $category,
-            ]);
+        $id = Yii::$app->request->get('id');
+        $product = Product::find()
+        ->where(['category_id' => $id])
+        ->all();
+        $category = Category::findOne($id);
+        return $this->render('catalog', compact('product', 'id', 'category'));
     }
     public function actionProduct()
     {

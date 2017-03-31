@@ -5,6 +5,7 @@ use yii\base\Widget;
 use yii\helpers\Html;
 use app\models\Category;
 use yii\helpers\Url;
+use Yii;
 
 
 class CategoryWidget extends Widget
@@ -26,10 +27,16 @@ class CategoryWidget extends Widget
 
     public function run()
     {
+        $menu = Yii::$app->cache->get('menu');
+        //get cache
+        if ($menu) return $menu;
+
 				$this->data = Category::find()->indexBy('id')->asArray()->all();
         $this->tree = $this->getTree();
         $this->menuHtml = $this->getMenuHtml($this->tree);
-       
+        //set cache
+        Yii::$app->cache->set('menu', $this->menuHtml, 60);
+
         return $this->menuHtml;
     }
     protected function getTree()
