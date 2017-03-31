@@ -11,6 +11,7 @@ use app\models\ContactForm;
 use app\models\Category;
 use app\models\Product;
 use app\models\Cart;
+use yii\data\Pagination;
 
 
 class SiteController extends Controller
@@ -65,11 +66,18 @@ class SiteController extends Controller
      * @return string
      */
     public function actionIndex()
-    {
-        $category = Category::find()->where(['parent_id' => '0'])->all();
-        return $this->render('index', [
-                'category' => $category,
+    {   
+        $product = Product::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 4,
+            'totalCount' => $product->count(),
             ]);
+        $product = $product
+        ->offset($pagination->offset)
+        ->limit($pagination->limit)
+        ->all();
+        // $category = Category::find()->where(['parent_id' => '0'])->all();
+        return $this->render('index', compact('product','pagination'));
     }
 
     /**
