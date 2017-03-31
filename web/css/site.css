@@ -169,15 +169,24 @@ a.desc:after {
 .sidebar-catalog{
     list-style-type: none;
     border: 2px solid grey;
-    background: #473a06;
-
+/*    background: #473a06; */
     min-height: 74vh;
+    padding-left: 15px;
+}
+.sidebar-catalog ul{
+    padding-left: 15px;
 }
 
 .sidebar-catalog li{
-    margin-left: -20px;
+    padding: 5px 0 5px 10px;
 }
 
 .sidebar-catalog li a{
-    color: white;
+    color: grey;
+    font-size: 20px;
+}
+
+.badge{
+    background: white;
+    color: black;
 }

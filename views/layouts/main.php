@@ -107,7 +107,7 @@ AppAsset::register($this);
 
         <div class="row">
         <div class="col-md-3">
-        <ul class="catalog">
+        <ul class="catalog sidebar-catalog">
         <?= CategoryWidget::widget(['tpl' => 'menu'])?>
         </ul>
         </div>
