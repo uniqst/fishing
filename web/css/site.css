@@ -168,8 +168,8 @@ a.desc:after {
 
 .sidebar-catalog{
     list-style-type: none;
-    border: 2px solid grey;
-/*    background: #473a06; */
+/*    border: 2px solid grey;
+*//*    background: #473a06; */
     min-height: 74vh;
     padding-left: 15px;
 }
@@ -179,6 +179,7 @@ a.desc:after {
 
 .sidebar-catalog li{
     padding: 5px 0 5px 10px;
+    list-style-type: none;
 }
 
 .sidebar-catalog li a{
