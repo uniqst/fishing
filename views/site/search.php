@@ -4,7 +4,7 @@ use app\models\Product;
 
 /* @var $this yii\web\View */
 
-$this->title = 'Поиск: '.$q;
+$this->title = 'Поиск|'.$q;
 ?>
 <?php if(!empty($product)):?>
   <h2>Поиск по запросу: <?=$q?></h2>

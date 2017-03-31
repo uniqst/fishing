@@ -12,6 +12,8 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\models\Category;
 use app\components\CategoryWidget;
+use app\components\MenuWidget;
+
 
 AppAsset::register($this);
 ?>
@@ -105,11 +107,9 @@ AppAsset::register($this);
 
         <div class="row">
         <div class="col-md-3">
-        <ul class="catalog sidebar-catalog">
-        <li><a href="">Каталог</a></li>
-        <?=CategoryWidget::widget(['tpl'=>'menu'])?>
+        <ul class="catalog">
+        <?= CategoryWidget::widget(['tpl' => 'menu'])?>
         </ul>
-
         </div>
         <div class="col-md-9">
         <?= $content ?>
