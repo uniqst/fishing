@@ -3,7 +3,7 @@ use yii\helpers\Url;
 
 ?>
 <li>
-    <a href="<?= Url::to(['site/catalog', 'id' => $category['id']])?>">
+    <a href="<?= Url::to(['site/catalog', 'name' => $category['name'], 'id' => $category['id']])?>">
         <?= $category['name']?>
         <?php if( isset($category['childs']) ): ?>
             <span class="badge"><i class="  glyphicon glyphicon-triangle-bottom"></i></span>

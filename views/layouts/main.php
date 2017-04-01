@@ -33,7 +33,7 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
+<?php $qid = Yii::$app->request->get('q');?>
 <div class="wrap container">
 <nav class="navbar container">
   <div class="container">
@@ -58,9 +58,9 @@ AppAsset::register($this);
         <li><a href="<?=Url::to(['site/contact'])?>">Контакты</a></li>
 
       </ul>
-      <form class="navbar-form navbar-right" action="<?=Url::to(['site/search'])?>" method="get">
+      <form class="navbar-form navbar-right" action="<?=Url::to(['site/search', 'q' => $qid])?>" method="get">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Поиск" name="q">
+          <input type="text" class="form-control" placeholder="Поиск" name="q" value="<?=$qid?>">
         </div>
         <button type="submit" class="btn btn-default">Искать</button>
       </form>
