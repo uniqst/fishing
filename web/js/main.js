@@ -6,7 +6,7 @@ function showCart(cart){
 }
 
 function getCart(){
-	return false;
+	
 	$.ajax({
 		url: '/cart/show',
 		type: 'GET',
@@ -55,7 +55,7 @@ function clearCart(){
 $('.add-to-cart').on('click', function (e){
 	e.preventDefault();
 	var id = $(this).data('id');
-	qty = $('#qty'+ id).val();
+	qty = $('#qty' + id).val();
 	$.ajax({
 		url: '/cart/add',
 		data: {id: id, qty: qty},
