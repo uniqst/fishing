@@ -20,10 +20,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <h1><?= $title;?></h1>
 <div class="row">
 <div class="col-md-4 col-sm-4 col-xs-12">
-<img src="<?= $prod->photo?>" width="100%" />
+<img class="img-thumbnail" src="<?= $prod->photo?>" width="100%" />
 </div>
 <div class="col-md-8 col-sm-8 col-xs-12">
-  <input type="text" value="1" id="qty<?= $prod->id?>" />
+  <input type="text" class="form-control" value="1" id="qty<?= $prod->id?>" />
           <a href="#" data-id="<?= $prod->id?>" class="btn btn-danger add-to-cart cart">
             <i class="glyphicon glyphicon-shopping-cart"></i>
             Добавить в корзину

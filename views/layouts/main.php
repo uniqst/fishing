@@ -54,7 +54,7 @@ AppAsset::register($this);
          <ul class="nav navbar-nav navbar-right">
         <li><a href="/">Главная</a></li>
         <li><a href="<?=Url::to(['site/spromotions'])?>">Акции</a></li>
-        <li><a href="<?=Url::to(['ssite/about'])?>">О магазине</a></li>
+        <li><a href="<?=Url::to(['site/about'])?>">О магазине</a></li>
         <li><a href="<?=Url::to(['site/contact'])?>">Контакты</a></li>
         <li><a href="#" class="cart" onclick="return getCart()"><i class="glyphicon glyphicon-shopping-cart" style="color: green"></i></a></li>
 

@@ -4,7 +4,6 @@ use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 $this->title = 'Корзина';
 ?>
-<div class="container">
 
 <?php if( Yii::$app->session->hasflash('success')):?>
 	<div class="alert alert-success alert-dismissible" role="alert">
@@ -66,4 +65,3 @@ $this->title = 'Корзина';
 <?php else:?>
 	<h3>Корзина пуста</h3>
 <?php endif;?>
-</div>

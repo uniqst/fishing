@@ -69,7 +69,7 @@ class SiteController extends Controller
     {   
         $product = Product::find();
         $pagination = new Pagination([
-            'defaultPageSize' => 4,
+            'defaultPageSize' => 3,
             'totalCount' => $product->count(),
             ]);
         $product = $product

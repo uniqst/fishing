@@ -6,7 +6,7 @@ use yii\helpers\Url;
     <a href="<?= Url::to(['site/catalog', 'name' => $category['name'], 'id' => $category['id']])?>">
         <?= $category['name']?>
         <?php if( isset($category['childs']) ): ?>
-            <span class="badge"><i class="  glyphicon glyphicon-triangle-bottom"></i></span>
+            <span class="badge"><i class="glyphicon glyphicon-triangle-bottom"></i></span>
         <?php endif;?>
     </a>
     <?php if( isset($category['childs']) ): ?>
