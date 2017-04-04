@@ -72,10 +72,32 @@ class CartController extends Controller
         $session->open();
         $order = new Order();
         if ($order->load(Yii::$app->request->post())) {
-            // $order->qty = $session['cart.qty'];
-            // $order->sum = $session['cart.sum'];
+            $order->qty = $session['cart.qty'];
+            $order->sum = $session['cart.sum'];
+            if($order->save()){
+                $this->saveOrderItems($session['cart'], $order->id);
+                Yii::$app->session->setFlash('success', 'Ваш заказ притян. Менеджер вскоре свяжется свами');
+                    return $this->refresh();
+            }else{
+                Yii::$app->session->setFlash('error', 'Ошибка оформления заказа');
+            }
         }
         return $this->render('view', compact('session', 'order'));
+    }
+
+    protected function saveOrderItems($items, $order_id)
+    {
+        foreach($items as $id => $item){
+            $order_item = new OrderItem();
+            $order_item->order_id = $order_id;
+            $order_item->product_id = $id;
+            $order_item->name = $item['name'];
+            $order_item->price = $item['price'];
+            $order_item->qty_item = $item['qty'];
+            $order_item->sum_item = $item['qty'] * $item['price'];
+            $order_item->save();
+
+        }
     }
 
 }

@@ -56,6 +56,7 @@ $config = [
                 'single-product/<id:\d+>/<name:\w+>' => 'site/single-product',
                 'catalog/<id:\d+>/<name:\w+>' => 'site/catalog',
                 '<action>' => 'site/<action>',
+                '<action>' => 'cart/<action>',
             ],
         ],
         

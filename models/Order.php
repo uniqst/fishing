@@ -34,7 +34,7 @@ class Order extends ActiveRecord
             [
                 'class' => TimestampBehavior::className(),
                 'attributes' => [
-                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'update_at'],
                     ActiveRecord::EVENT_BEFORE_UPDATE => ['update_at'],
                 ],
                 // если вместо метки времени UNIX используется datetime:
@@ -44,7 +44,7 @@ class Order extends ActiveRecord
     }
 
     public function getOrderItem(){
-        return $this->hasOne(OrderItem::className(), ['order_id' => 'id']);
+        return $this->hasMany(OrderItem::className(), ['order_id' => 'id']);
     }
 
     /**

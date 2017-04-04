@@ -21,7 +21,7 @@ $this->title = 'ABC Fishing';
                        <a href="<?= Url::to(['site/single-product', 'name' => $prod->name, 'id' => $prod->id]);?>"><img class="qqq img-thumbnail"" src="<?php echo $prod->photo;?>" width="100%"/></a>
                       <h2>$<?=$prod->price?></h2>
                       <p><?=$prod->name?></p>
-        <input type="text" value="1" class="form-control" id="qty<?= $prod->id?>" style="width: 25%; position: inline-block;" />
+        <input type="text" value="1" class="form-control" id="qty<?= $prod->id?>" style="width: 25%; position: inline-block; margin: auto;" />
           <a href="#" style="width: 70%; position: inline-block;" data-id="<?= $prod->id?>" class="btn btn-danger add-to-cart cart">
             <i class="glyphicon glyphicon-shopping-cart"></i>
             Добавить в корзину

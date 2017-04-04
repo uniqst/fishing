@@ -4,7 +4,6 @@ use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 $this->title = 'Корзина';
 ?>
-
 <?php if( Yii::$app->session->hasflash('success')):?>
 	<div class="alert alert-success alert-dismissible" role="alert">
 	<button type="button" class="close" data-dismiss="alert" aria-lable="Close"><span aria-hidden="true">&times;</span></button>
