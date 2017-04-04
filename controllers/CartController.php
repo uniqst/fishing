@@ -75,8 +75,11 @@ class CartController extends Controller
             $order->qty = $session['cart.qty'];
             $order->sum = $session['cart.sum'];
             if($order->save()){
-                $this->saveOrderItems($session['cart'], $order->id);
+                $this->saveOrderItem($session['cart'], $order->id);
                 Yii::$app->session->setFlash('success', 'Ваш заказ притян. Менеджер вскоре свяжется свами');
+                    $session->remove('cart');
+                    $session->remove('cart.qty');
+                    $session->remove('cart.sum');
                     return $this->refresh();
             }else{
                 Yii::$app->session->setFlash('error', 'Ошибка оформления заказа');
@@ -85,7 +88,7 @@ class CartController extends Controller
         return $this->render('view', compact('session', 'order'));
     }
 
-    protected function saveOrderItems($items, $order_id)
+    protected function saveOrderItem($items, $order_id)
     {
         foreach($items as $id => $item){
             $order_item = new OrderItem();
