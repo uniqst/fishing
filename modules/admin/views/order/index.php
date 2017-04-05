@@ -6,16 +6,16 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Orders';
+$this->title = 'Список заказов';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="order-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
+<!--     <p>
         <?= Html::a('Create Order', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    </p> -->
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'update_at',
             'qty',
             'sum',
-            // 'status',
+            'status',
             // 'name',
             // 'email:email',
             // 'phone',

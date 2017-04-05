@@ -36,7 +36,7 @@ AppAsset::register($this);
 <div class="container">
    <div class="btn-group btn-group-justified">
         <a href="<?=Url::to(['category/index'])?>" class="btn btn-danger btn-lg">Категории</a>
-        <a href="" class="btn btn-danger btn-lg">Товары</a>
+        <a href="<?=Url::to(['product/index'])?>" class="btn btn-danger btn-lg">Товары</a>
         <a href="<?=Url::to(['order/index'])?>" class="btn btn-danger btn-lg">Заказы</a>
        </div>
 <?=$content?>

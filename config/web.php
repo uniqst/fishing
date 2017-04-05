@@ -56,6 +56,7 @@ $config = [
                 'search/<q:\w+>' => 'site/search',
                 'admin/' => 'admin/category/index',
                 'admin/order' => 'admin/order/index',
+                'admin/product' => 'admin/product/index',
                 'site/<id:\d+>/page/<page:\d+>' => 'site/catalog',
                 'single-product/<id:\d+>/<name:\w+>' => 'site/single-product',
                 'catalog/<id:\d+>/<name:\w+>' => 'site/catalog',
