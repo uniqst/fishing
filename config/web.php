@@ -9,6 +9,8 @@ $config = [
         'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',
+            'layout' => 'main',
+            'defaultRoute' => 'category/index',
         ],
     ],
     'components' => [
@@ -52,6 +54,8 @@ $config = [
             'rules' => [
                 'page/<page:\d+>' => 'site/index',
                 'search/<q:\w+>' => 'site/search',
+                'admin/' => 'admin/category/index',
+                'admin/order' => 'admin/order/index',
                 'site/<id:\d+>/page/<page:\d+>' => 'site/catalog',
                 'single-product/<id:\d+>/<name:\w+>' => 'site/single-product',
                 'catalog/<id:\d+>/<name:\w+>' => 'site/catalog',
