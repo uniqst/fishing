@@ -6,7 +6,7 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Products';
+$this->title = 'Список товаров';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="product-index">
@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
             ],
             'name',
-            'description',
+            // 'description',
             'price',
             // 'price_promo',
             // 'photo',

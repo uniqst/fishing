@@ -22,6 +22,18 @@ class Product extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $image;
+s
+
+    public function behaviors()
+    {
+        return [
+            'image' => [
+                'class' => 'rico\yii2images\behaviors\ImageBehave',
+            ]
+        ];
+    }
+
     public static function tableName()
     {
         return 'product';
@@ -40,6 +52,7 @@ class Product extends \yii\db\ActiveRecord
             [['category_id', 'name', 'description', 'price', 'price_promo', 'photo', 'brand'], 'required'],
             [['category_id', 'price', 'price_promo'], 'integer'],
             [['name', 'description', 'photo', 'brand'], 'string', 'max' => 255],
+            [['imageFile'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
         ];
     }
 

@@ -28,6 +28,11 @@ class Order extends \yii\db\ActiveRecord
         return 'order';
     }
 
+    public function getOrderItem()
+    {
+        return $this->hasMany(OrderItem::className(), ['order_id' => 'id']);
+    }
+
     /**
      * @inheritdoc
      */

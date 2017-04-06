@@ -26,7 +26,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'update_at',
             'qty',
             'sum',
-            'status',
+            // 'status',
+            [
+                'attribute' => 'status',
+                'value' => function($data){
+                 return !$data->status ? '<span class="glyphicon glyphicon-remove text-danger"></span>' : '<span class="glyphicon glyphicon-ok text-success"></span>';
+                },
+                'format' => 'html',
+            ],
             // 'name',
             // 'email:email',
             // 'phone',

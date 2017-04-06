@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use app\components\CategoryWidget;
+use mihaildev\ckeditor\CKEditor;
+
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Product */
@@ -13,7 +15,7 @@ use app\components\CategoryWidget;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'category_id')->textInput() ?>
+  <!--   <?= $form->field($model, 'category_id')->textInput() ?> -->
 
     <div class="form-group field-product-category_id has-success">
         <label class="control-label" for="product-category_id">Категория</label>
@@ -24,7 +26,14 @@ use app\components\CategoryWidget;
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
+    <?php
+        echo $form->field($model, 'description')->widget(CKEditor::className(),[
+    'editorOptions' => [
+        'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
+        'inline' => false, //по умолчанию false
+    ],
+]);
+    ?>
 
     <?= $form->field($model, 'price')->textInput() ?>
 
