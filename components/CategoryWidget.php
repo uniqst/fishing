@@ -11,6 +11,7 @@ use Yii;
 class CategoryWidget extends Widget
 {
     public $tpl;
+    public $model;
 		public $data;
 		public $tree;
 		public $menuHtml;
@@ -27,15 +28,20 @@ class CategoryWidget extends Widget
 
     public function run()
     {
+        if($this->tpl == 'menu.php'){
+          //get cache
         $menu = Yii::$app->cache->get('menu');
-        //get cache
         if ($menu) return $menu;
+        }
 
 				$this->data = Category::find()->indexBy('id')->asArray()->all();
         $this->tree = $this->getTree();
         $this->menuHtml = $this->getMenuHtml($this->tree);
         //set cache
+        if($this->tpl == 'menu.php'){
         Yii::$app->cache->set('menu', $this->menuHtml, 60);
+
+        }
 
         return $this->menuHtml;
     }
@@ -56,17 +62,17 @@ class CategoryWidget extends Widget
       return $tree;
     }
 
-    protected function getMenuHtml($tree){
+    protected function getMenuHtml($tree, $tab = ''){
       $str = '';
 
       foreach ($tree as $category){
-        $str .= $this->carToTemplate($category);
+        $str .= $this->carToTemplate($category, $tab);
       }
 
       return $str;
     }
 
-    protected function carToTemplate($category){
+    protected function carToTemplate($category, $tab){
       ob_start();
       include __DIR__.'/menu_tpl/'.$this->tpl;
       return ob_get_clean();

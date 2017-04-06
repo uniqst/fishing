@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use app\nodels\Category;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -22,10 +23,14 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'parent_id',
-            'img',
+            // 'parent_id',
+             [
+                'attribute' => 'parent_id',
+                'value'     => function($data){
+                    return $data->category->name ? $data->category->name : "Нет";
+                },
+            ],
             'name',
-
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

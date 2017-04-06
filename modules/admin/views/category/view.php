@@ -29,8 +29,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'parent_id',
-            'img',
+            // 'parent_id',
+               [
+                'attribute' => 'parent_id',
+                'value' =>  
+                     $model->category->name ? $model->category->name : "Нет",
+            ],
+            // 'img',
             'name',
         ],
     ]) ?>
