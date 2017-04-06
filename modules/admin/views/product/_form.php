@@ -13,9 +13,12 @@ use mihaildev\ckeditor\CKEditor;
 
 <div class="product-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+
 
   <!--   <?= $form->field($model, 'category_id')->textInput() ?> -->
+
+    <?= $form->field($model, 'imageFile')->fileInput() ?>
 
     <div class="form-group field-product-category_id has-success">
         <label class="control-label" for="product-category_id">Категория</label>
@@ -39,8 +42,8 @@ use mihaildev\ckeditor\CKEditor;
 
     <?= $form->field($model, 'price_promo')->textInput() ?>
 
-    <?= $form->field($model, 'photo')->textInput(['maxlength' => true]) ?>
-
+<!--     <?= $form->field($model, 'photo')->textInput(['maxlength' => true]) ?>
+ -->
     <?= $form->field($model, 'brand')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">

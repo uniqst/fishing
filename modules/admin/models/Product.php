@@ -4,6 +4,7 @@ namespace app\modules\admin\models;
 use app\models\Category;
 
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "product".
@@ -22,8 +23,8 @@ class Product extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public $image;
-s
+    public $file;
+
 
     public function behaviors()
     {
@@ -51,8 +52,9 @@ s
         return [
             [['category_id', 'name', 'description', 'price', 'price_promo', 'photo', 'brand'], 'required'],
             [['category_id', 'price', 'price_promo'], 'integer'],
+            [['file'], 'file'],
             [['name', 'description', 'photo', 'brand'], 'string', 'max' => 255],
-            [['imageFile'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
+            // [['imageFile'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
         ];
     }
 
@@ -70,6 +72,7 @@ s
             'price_promo' => 'Акция',
             'photo' => 'Фото',
             'brand' => 'Бренд',
+            'file' => 'Фото'
         ];
     }
 }
