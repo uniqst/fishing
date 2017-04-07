@@ -21,7 +21,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            // 'id',
+             [
+                'attribute' => 'photo',
+                 'value'     => function($data){
+                    return '<img src="/web/' . $data->photo . '" style="width: 150px;" />';
+                },
+                'format' => 'html',
+            ],
             // 'category_id',
             [
                 'attribute' => 'category_id',
@@ -34,6 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'price',
             // 'price_promo',
             // 'photo',
+           
             // 'brand',
 
             ['class' => 'yii\grid\ActionColumn'],

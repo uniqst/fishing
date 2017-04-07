@@ -29,6 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
+
+              [
+                'attribute' => 'photo',
+                 'value'     => function($data){
+                    return '<img src="/web/' . $data->photo . '" style="width: 150px;" />';
+                },
+                'format' => 'html',
+            ],
             // 'category_id',
             [
                 'attribute' => 'category_id',
@@ -39,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'description:html',
             'price',
             'price_promo',
-            'photo',
+            // 'photo',
             'brand',
         ],
     ]) ?>

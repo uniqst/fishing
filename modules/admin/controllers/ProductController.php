@@ -62,17 +62,19 @@ class ProductController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+
     public function actionCreate()
     {
+
         $model = new Product();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
-            $model->file = UploadedFile::getInstance($model, 'false');
-            $model->file->saveAs('upload/' . $model->file->baseName . '.' . $model->file->extansion);
-            $model->photo = 'upload/' . $model->$file->baseName . '.' . $model->file->extansion;
-
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $model->file = UploadedFile::getInstance($model, 'file');
+            $model->file->saveAs('upload/' . $model->file->baseName . '.' . $model->file->extension);
+            $model->photo = 'upload/' . $model->file->baseName . '.' . $model->file->extension;
+            $model->save();
+             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -90,7 +92,12 @@ class ProductController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+
+            $model->file = UploadedFile::getInstance($model, 'file');
+            $model->file->saveAs('upload/' . $model->file->baseName . '.' . $model->file->extension);
+            $model->photo = 'upload/' . $model->file->baseName . '.' . $model->file->extension;
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [

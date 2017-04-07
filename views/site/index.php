@@ -18,7 +18,7 @@ $this->title = 'ABC Fishing';
               <div class="product-image-wrapper">
                 <div class="single-products">
                     <div class="productinfo text-center">
-                       <a href="<?= Url::to(['site/single-product', 'name' => $prod->name, 'id' => $prod->id]);?>"><img class="qqq img-thumbnail"" src="<?php echo $prod->photo;?>" width="100%"/></a>
+                       <a href="<?= Url::to(['site/single-product', 'name' => $prod->name, 'id' => $prod->id]);?>"><img class="qqq img-thumbnail"" src="<?= '/web/'.$prod->photo;?>" width="100%"/></a>
                       <h2>$<?=$prod->price?></h2>
                       <p><?=$prod->name?></p>
         <input type="text" value="1" class="form-control" id="qty<?= $prod->id?>" style="width: 25%; position: inline-block; margin: auto;" />

@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use app\components\CategoryWidget;
 use mihaildev\ckeditor\CKEditor;
+use yii\web\UploadedFile;
+use app\modules\admin\models\Product;
 
 
 /* @var $this yii\web\View */
@@ -16,9 +18,9 @@ use mihaildev\ckeditor\CKEditor;
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
 
-  <!--   <?= $form->field($model, 'category_id')->textInput() ?> -->
 
-    <?= $form->field($model, 'imageFile')->fileInput() ?>
+    <?= $form->field($model, 'file')->fileInput() ?>
+    <img src="/web/<?=$model->photo?>" width="200px;"/>
 
     <div class="form-group field-product-category_id has-success">
         <label class="control-label" for="product-category_id">Категория</label>
