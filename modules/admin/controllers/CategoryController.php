@@ -40,7 +40,7 @@ class CategoryController extends Controller
         $dataProvider = new ActiveDataProvider([
             'query' => Category::find()->with('category'),
              'pagination' => [
-                'pageSize' => 10,
+                'pageSize' => 20,
                  ],
         ]);
 

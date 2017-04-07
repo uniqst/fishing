@@ -38,6 +38,14 @@ class OrderController extends Controller
     {
         $dataProvider = new ActiveDataProvider([
             'query' => Order::find(),
+            'pagination'=>[
+            'pageSize' => 10,
+            ],
+            'sort' => [
+            'defaultOrder' => [
+                'status' => SORT_ASC,
+              ],
+            ],
         ]);
 
         return $this->render('index', [
