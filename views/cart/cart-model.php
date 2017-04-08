@@ -12,7 +12,7 @@
       	 		<tbody>
       	 			<?php foreach($session['cart'] as $id => $item):?>
       	 			<tr>
-                                    <td><img src="<?= $item['img']?>" width="50px"/></td>
+                                    <td><img src="/web/<?=$item['img']?>" width="50px"/></td>
                                     <td><?= $item['name']?></td>
                                     <td><?= $item['qty']?></td>
                                     <td><?= $item['price']?></td>

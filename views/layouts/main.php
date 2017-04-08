@@ -118,7 +118,7 @@ AppAsset::register($this);
         </div>
     </div>
 </div>
-hello
+
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; ABC Fishing <?= date('Y') ?></p>

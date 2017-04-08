@@ -36,6 +36,7 @@ $('#cart .modal-body').on('click', '.del-item', function(){
 	});
 });
 
+
 function clearCart(){
 	$.ajax({
 		url: '/cart/clear',
