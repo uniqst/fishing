@@ -18,7 +18,7 @@ $this->title = 'ABC Fishing';
                 <p class="text-success"><?=$prod->name?></p>
                    <a href="#" style="width: 100%; position: inline-block;" data-id="<?= $prod->id?>" class="btn btn-danger add-to-cart cart">
             <i class="glyphicon glyphicon-shopping-cart"></i>
-            Добавить в корзину
+            В корзину
           </a>
           </div>
         <?php }?>
