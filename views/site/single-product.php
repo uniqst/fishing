@@ -20,20 +20,12 @@ $this->params['breadcrumbs'][] = $this->title;
 <h1><?= $title;?></h1>
 <div class="row">
 <div class="col-md-4 col-sm-4 col-xs-12">
-<img class="img-thumbnail" src="<?= $prod->photo?>" width="100%" />
+<img class="img-thumbnail" src="/web/<?=$prod->photo?>" width="100%" />
 </div>
 <div class="col-md-8 col-sm-8 col-xs-12">
-  <input type="text" class="form-control" value="1" id="qty<?= $prod->id?>" />
-          <a href="#" data-id="<?= $prod->id?>" class="btn btn-danger add-to-cart cart">
-            <i class="glyphicon glyphicon-shopping-cart"></i>
-            Добавить в корзину
-          </a>
+       
 <table class="table table-bordered">
   <tbody>
-    <tr>
-      <td class="single-first-col">Название</td>
-      <td><?= $prod->name?></td>
-    </tr>
     <tr>
       <td class="single-first-col">Бренд</td>	
 	  <td><?= $prod->brand?></td>
@@ -43,10 +35,14 @@ $this->params['breadcrumbs'][] = $this->title;
 	  <td><?= $prod->price?></td>
     </tr>
      <tr>
-      <td class="single-first-col">Описание</td>
-	  <td><?= $prod->description?></td>
+      <td class="single-first-col"> <input type="text" class="form-control" value="1" id="qty<?= $prod->id?>" /></td>
+    <td> <a href="#" data-id="<?= $prod->id?>" class="btn btn-danger add-to-cart cart">
+      <i class="glyphicon glyphicon-shopping-cart"></i>
+            Добавить в корзину
+          </a></td>
     </tr>
   </tbody>
 </table>
 </div>
+<?=$prod->description?>
 </div>

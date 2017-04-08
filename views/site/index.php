@@ -13,8 +13,22 @@ $this->title = 'ABC Fishing';
             <h2 class="title text-center">Features Items</h2>
         <div class="row">
        <?php foreach($product as $prod){?>
-        
- <div class="col-sm-4">
+          <div class="col-md-3 col-sm-6 col-xs-12" >
+               <a href="<?= Url::to(['site/single-product', 'name' => $prod->name, 'id' => $prod->id]);?>"><img class="qqq img-thumbnail"" src="<?= '/web/'.$prod->photo;?>" width="100%"/></a>
+                <p class="text-success"><?=$prod->name?></p>
+                   <a href="#" style="width: 100%; position: inline-block;" data-id="<?= $prod->id?>" class="btn btn-danger add-to-cart cart">
+            <i class="glyphicon glyphicon-shopping-cart"></i>
+            Добавить в корзину
+          </a>
+          </div>
+        <?php }?>
+        </div>
+        <div class="clearfix"></div>
+        <?=LinkPager::widget(['pagination' => $pagination])?>
+</div>
+           
+ <!--          
+ <div class="col-sm-3">
               <div class="product-image-wrapper">
                 <div class="single-products">
                     <div class="productinfo text-center">
@@ -31,13 +45,4 @@ $this->title = 'ABC Fishing';
                 </div>
             
               </div>
-            </div>
-       
-        <?php }?>
-        </div>
-        <div class="clearfix"></div>
-        <?=LinkPager::widget(['pagination' => $pagination])?>
-</div>
-           
-          
- 
+            </div> -->

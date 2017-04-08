@@ -6,15 +6,15 @@ use yii\helpers\Url;
 /* @var $this yii\web\View */
 
 $this->title = 'Поиск|'.$q;
-?>
+?>dsa
 <?php if(!empty($product)):?>
   <h2>Поиск по запросу: <?=$q?></h2>
 <div class="site-index">
     <div class="body-content">
          <div class="row">
        <?php foreach($product as $prod){?>
-        
  <div class="col-sm-4">
+ <div value="123"></div>
               <div class="product-image-wrapper">
                 <div class="single-products">
                     <div class="productinfo text-center">
@@ -42,4 +42,3 @@ $this->title = 'Поиск|'.$q;
 <?php else:?>
   <h2>По запросу <?=$q?> ничего не найдено...</h2>
 <?php endif;?>
-
