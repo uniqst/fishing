@@ -3,17 +3,20 @@
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model app\models\ContactForm */
+use yii\widgets\LinkPager;
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->title = 'Каталог | '. $category->name;
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
     <h1><?= Html::encode($this->title) ?></h1>
-       <div class="row">
-        <?php foreach($product as $prod){?>
-        <div class="col-sm-4">
+        <div class="row">
+       <?php foreach($product as $prod){?>
+        
+ <div class="col-sm-4">
               <div class="product-image-wrapper">
                 <div class="single-products">
                     <div class="productinfo text-center">
@@ -31,6 +34,9 @@ $this->params['breadcrumbs'][] = $this->title;
             
               </div>
             </div>
+       
         <?php }?>
         </div>
+        <div class="clearfix"></div>
+        <?=LinkPager::widget(['pagination' => $pagination])?>
 </div>

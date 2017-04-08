@@ -69,7 +69,7 @@ class SiteController extends Controller
     {   
         $product = Product::find();
         $pagination = new Pagination([
-            'defaultPageSize' => 3,
+            'defaultPageSize' => 9,
             'totalCount' => $product->count(),
             ]);
         $product = $product
@@ -148,11 +148,16 @@ class SiteController extends Controller
     public function actionCatalog($id)
     {
         $id = Yii::$app->request->get('id');
-        $product = Product::find()
-        ->where(['category_id' => $id])
+        $pagination = new Pagination([
+            'defaultPageSize' => 9,
+            'totalCount' => $product->count(),
+            ]);
+        $product = $product
+        ->offset($pagination->offset)
+        ->limit($pagination->limit)
         ->all();
-        $category = Category::findOne($id);
-        return $this->render('catalog', compact('product', 'id', 'category'));
+      
+        return $this->render('catalog', compact('product','pagination'));
     }
     public function actionProduct()
     {
@@ -178,17 +183,17 @@ class SiteController extends Controller
      {
         $q = Yii::$app->request->get('q');
         $query = Product::find()->where(['like', 'name', $q]);
-        $pages = new Pagination([
+        $pagination = new Pagination([
             'totalCount' => $query->count(),
-            'pageSize' => 4,
+            'pageSize' => 9,
             'forcePageParam' => false,
             'pageSizeParam' => false
          ]);
         $product = $query
-        ->offset($pages->offset)
-        ->limit($pages->limit)
+        ->offset($pagination->offset)
+        ->limit($pagination->limit)
         ->all(); 
-        return $this->render('search', compact('product', 'pages', 'q'));
+        return $this->render('search', compact('product', 'pagination', 'q'));
      }
     
 
