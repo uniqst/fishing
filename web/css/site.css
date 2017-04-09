@@ -177,10 +177,15 @@ a.desc:after {
 *//*    background: #473a06; */
     min-height: 74vh;
     padding-left: 15px;
+
 }
+
 .sidebar-catalog ul{
     padding-left: 15px;
+
 }
+
+
 
 .sidebar-catalog li{
     padding: 5px 0 5px 10px;
@@ -198,4 +203,18 @@ a.desc:after {
 }
 
 
-/* NAV
+/* NAV */
+
+.product-border{
+        border: 2px solid green;
+        border-radius: 5px;
+}
+
+.content{
+    margin-top: 20px;
+}
+
+.input-inline{
+    display: inline;
+    width: 50%;
+}

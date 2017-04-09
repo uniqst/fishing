@@ -35,7 +35,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <?php $qid = Yii::$app->request->get('q');?>
 <div class="wrap">
-<nav class="navbar ">
+<nav class="navbar" style="background: lightyellow; height: 130px;">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -45,7 +45,7 @@ AppAsset::register($this);
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">ABC Fishing</a>
+      <a class="navbar-brand" href="/"><img src="http://designlife.ru/cms/data/upimages/fish_konkurs.jpg" alt="" style="border-radius: 50%; width: 100px;"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -63,7 +63,7 @@ AppAsset::register($this);
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Поиск" name="q" value="<?=$qid?>">
         </div>
-        <button type="submit" class="btn btn-default">Искать</button>
+        <button type="submit" class="btn btn-success">Искать</button>
       </form>
    
     </div><!-- /.navbar-collapse -->
@@ -94,25 +94,94 @@ AppAsset::register($this);
     $category = Category::find()->where(['parent_id' => '0'])->all();
     ?>
     <div class="container">
-       <div class="btn-group btn-group-justified">
-    <?php foreach($category as $cat):?>
-        <a href="<?=Url::to(['catalog', 'id' => $cat->id])?>" class="btn btn-warning btn-lg"><?=$cat->name?></a>
-    <?php endforeach;?>
-       </div>
+  <!--     <div id="myCarousel" style="height: 500px;" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <div class="carousel-inner" style="width: 500px;" role="listbox">
+    <div class="item active">
+      <img src="http://minionomaniya.ru/wp-content/uploads/2016/01/%D0%9A%D0%B5%D0%B2%D0%B8%D0%BD.jpg" width="100%" alt="Chania">
+    </div>
+
+    <div class="item">
+      <img src="http://minionomaniya.ru/wp-content/uploads/2016/01/%D0%9A%D0%B5%D0%B2%D0%B8%D0%BD.jpg" alt="Chania">
+    </div>
+
+    <div class="item">
+      <img src="http://minionomaniya.ru/wp-content/uploads/2016/01/%D0%9A%D0%B5%D0%B2%D0%B8%D0%BD.jpg" alt="Flower">
+    </div>
+
+    <div class="item">
+      <img src="http://minionomaniya.ru/wp-content/uploads/2016/01/%D0%9A%D0%B5%D0%B2%D0%B8%D0%BD.jpg" alt="Flower">
+    </div>
+  </div>
+
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+ -->
       <!-- /input-group -->
 <!--     <a href="#" onclick="return getCart()">Корзина</a> -->
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ])  ?>
 
-
-        <div class="row">
-        <div class="col-md-3">
-        <ul class="catalog sidebar-catalog">
-        <?= CategoryWidget::widget(['tpl' => 'menu'])?>
+  <ul class="nav nav-pills">
+        <?php foreach($category as $cat){?>
+ <li class="dropdown btn-group ">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle btn btn-danger btn-lg">
+      <?=$cat['name']?>
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+    <?php
+    $categ = Category::find()->where(['parent_id' => $cat['id']])->all();
+    foreach($categ as $c){
+    ?>
+      <li><a href="#"><?=$c['name']?></a></li>
+    <?php }?>
         </ul>
+        <?php }?>
+       </ul>
+</ul>
+
+        <div class="row content">
+        <div class="col-md-2">
+         <form>
+          <div class="form-group">
+          <select class="selectpicker form-control">
+              <option value="">Все категории</option>
+                  <?php foreach($category as $cat){?>
+                  <optgroup label="<?=$cat['name']?>" style="font-size: 20px;">
+                    <?php
+                  $categ = Category::find()->where(['parent_id' => $cat['id']])->all();
+                  foreach($categ as $c){ ?>
+                    <option><a href="#"><?=$c['name']?></a></option>
+                  <?php }?>
+                  </optgroup>
+             <?php }?>
+            </select>
+          </div>
+          <div class="form-group">   
+           <label>Цена</label>
+           <div class="clearfix"></div>
+           <input type="text" class="form-control" id="from" placeholder="От" style="display: inline; width: 48%">
+           <input type="text" class="form-control" placeholder="До" style="display: inline; width: 48%">
+          </div>
+          <button type="submit" class="btn btn-success" style="width: 100%">Показать</button>
+          </form>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-10" style="margin-top: -20px;">
         <?= $content ?>
         </div>
         </div>

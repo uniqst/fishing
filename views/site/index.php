@@ -13,9 +13,11 @@ $this->title = 'ABC Fishing';
             <h2 class="title text-center">Features Items</h2>
         <div class="row">
        <?php foreach($product as $prod){?>
-          <div class="col-md-3 col-sm-6 col-xs-12" >
-               <a href="<?= Url::to(['site/single-product', 'name' => $prod->name, 'id' => $prod->id]);?>"><img class="qqq img-thumbnail"" src="<?= '/web/'.$prod->photo;?>" width="100%"/></a>
-                <p class="text-success"><?=$prod->name?></p>
+          <div class="col-md-3 col-sm-6 col-xs-12" style="margin-bottom: 20px;">
+               <a href="<?= Url::to(['site/single-product', 'name' => $prod->name, 'id' => $prod->id]);?>"><img class="qqq img-thumbnail"" src="<?= '/web/'.$prod->photo;?>" style="width: 100%; height: 150px;"/></a>
+                <a href="<?= Url::to(['site/single-product', 'name' => $prod->name, 'id' => $prod->id]);?>"><p class="text-danger text-center product-border" ><?=$prod->name?></p></a>
+                <a href="<?= Url::to(['site/single-product', 'name' => $prod->name, 'id' => $prod->id]);?>"><p class="text-success text-center product-border" ><?=$prod->price?> грн</p></a>
+
                    <a href="#" style="width: 100%; position: inline-block;" data-id="<?= $prod->id?>" class="btn btn-danger add-to-cart cart">
             <i class="glyphicon glyphicon-shopping-cart"></i>
             В корзину
