@@ -144,7 +144,6 @@ class SiteController extends Controller
         $ewq = new Ewq();
         if($qwe->load(Yii::$app->request->post()) && $qwe->save() 
         && $ewq->load(Yii::$app->request->post()) && $ewq->save()){
-                echo "Ура";
         }
         return $this->render('about', compact('qwe', 'ewq'));
     }
