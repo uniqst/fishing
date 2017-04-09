@@ -11,6 +11,9 @@ use app\models\ContactForm;
 use app\models\Category;
 use app\models\Product;
 use app\models\Cart;
+use app\models\Qwe;
+use app\models\Ewq;
+
 use yii\data\Pagination;
 
 
@@ -137,7 +140,13 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return $this->render('about');
+        $qwe = new Qwe();
+        $ewq = new Ewq();
+        if($qwe->load(Yii::$app->request->post()) && $qwe->save() 
+        && $ewq->load(Yii::$app->request->post()) && $ewq->save()){
+                echo "Ура";
+        }
+        return $this->render('about', compact('qwe', 'ewq'));
     }
 
     public function actionPromotions()

@@ -11,6 +11,7 @@ use yii\bootstrap\Modal;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\models\Category;
+use app\models\Product;
 use app\components\CategoryWidget;
 use app\components\MenuWidget;
 
@@ -159,6 +160,7 @@ AppAsset::register($this);
         <div class="col-md-2">
          <form>
           <div class="form-group">
+           <label>Категории</label>
           <select class="selectpicker form-control">
               <option value="">Все категории</option>
                   <?php foreach($category as $cat){?>
@@ -172,11 +174,31 @@ AppAsset::register($this);
              <?php }?>
             </select>
           </div>
+          <div class="formgroup">
+            <label>Вес</label>
+            <select name="" class="form-control">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+            </select>
+          </div>
           <div class="form-group">   
            <label>Цена</label>
            <div class="clearfix"></div>
            <input type="text" class="form-control" id="from" placeholder="От" style="display: inline; width: 48%">
            <input type="text" class="form-control" placeholder="До" style="display: inline; width: 48%">
+          </div>
+             <div class="form-group">
+             <?php $product = Product::find()->groupBy('brand')->all();?>
+           <label>Бренд</label>
+              <select class="selectpicker form-control">
+              <option value="">Все Бренды</option>
+                  <?php foreach($product as $prod){?>
+                      <option><?=$prod['brand']?></option>
+                  <?php }?>
+            </select>
           </div>
           <button type="submit" class="btn btn-success" style="width: 100%">Показать</button>
           </form>
