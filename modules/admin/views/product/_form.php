@@ -6,11 +6,14 @@ use app\components\CategoryWidget;
 use mihaildev\ckeditor\CKEditor;
 use yii\web\UploadedFile;
 use app\modules\admin\models\Product;
+use app\modules\admin\models\InCategory;
 
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Product */
 /* @var $form yii\widgets\ActiveForm */
+$incat = new InCategory();
+
 ?>
 
 <div class="product-form">
@@ -44,9 +47,9 @@ use app\modules\admin\models\Product;
 
     <?= $form->field($model, 'price_promo')->textInput() ?>
 
-<!--     <?= $form->field($model, 'photo')->textInput(['maxlength' => true]) ?>
- -->
+
     <?= $form->field($model, 'brand')->textInput(['maxlength' => true]) ?>
+     <?= $form->field($model, 'width')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -73,66 +73,11 @@ AppAsset::register($this);
 
 
     <?php
-    // NavBar::begin([
-    //     'brandLabel' => 'ABC Fishing',
-    //     'brandUrl' => Yii::$app->homeUrl,
-    //     'options' => [
-    //         'class' => 'navbar-inverse navbar-fixed-top',
-    //     ],
-    // ]);
-    // echo Nav::widget([
-    //     'options' => ['class' => 'navbar-nav navbar-right'],
-    //     'items' => [
-    //         ['label' => 'Главная', 'url' => [Yii::$app->homeUrl]],
-    //         ['label' => 'Акции', 'url' => ['/site/promotions']],
-    //         ['label' => 'О магазине', 'url' => ['/site/about']],
-    //         ['label' => 'Контакты', 'url' => ['/site/contact']],
-
-    //     ],
-    // ]);
-    // NavBar::end();
 
     $category = Category::find()->where(['parent_id' => '0'])->all();
     ?>
     <div class="container">
-  <!--     <div id="myCarousel" style="height: 500px;" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
-  </ol>
 
-  <div class="carousel-inner" style="width: 500px;" role="listbox">
-    <div class="item active">
-      <img src="http://minionomaniya.ru/wp-content/uploads/2016/01/%D0%9A%D0%B5%D0%B2%D0%B8%D0%BD.jpg" width="100%" alt="Chania">
-    </div>
-
-    <div class="item">
-      <img src="http://minionomaniya.ru/wp-content/uploads/2016/01/%D0%9A%D0%B5%D0%B2%D0%B8%D0%BD.jpg" alt="Chania">
-    </div>
-
-    <div class="item">
-      <img src="http://minionomaniya.ru/wp-content/uploads/2016/01/%D0%9A%D0%B5%D0%B2%D0%B8%D0%BD.jpg" alt="Flower">
-    </div>
-
-    <div class="item">
-      <img src="http://minionomaniya.ru/wp-content/uploads/2016/01/%D0%9A%D0%B5%D0%B2%D0%B8%D0%BD.jpg" alt="Flower">
-    </div>
-  </div>
-
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
- -->
-      <!-- /input-group -->
-<!--     <a href="#" onclick="return getCart()">Корзина</a> -->
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ])  ?>
@@ -148,8 +93,9 @@ AppAsset::register($this);
     <?php
     $categ = Category::find()->where(['parent_id' => $cat['id']])->all();
     foreach($categ as $c){
+        $count = Product::find()->where(['category_id' => $c->id])->count();
     ?>
-      <li><a href="#"><?=$c['name']?></a></li>
+      <li><a href="#"><?=$c['name'];?>(<?=$count?>)</a></li>
     <?php }?>
         </ul>
         <?php }?>
@@ -167,8 +113,9 @@ AppAsset::register($this);
                   <optgroup label="<?=$cat['name']?>" style="font-size: 20px;">
                     <?php
                   $categ = Category::find()->where(['parent_id' => $cat['id']])->all();
-                  foreach($categ as $c){ ?>
-                    <option><a href="#"><?=$c['name']?></a></option>
+                  foreach($categ as $c){ 
+                    $count = Product::find()->where(['category_id' => $c->id])->count();?>
+                    <option><a href="#"><?=$c['name']?>(<?=$count?>)</a></option>
                   <?php }?>
                   </optgroup>
              <?php }?>

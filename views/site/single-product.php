@@ -24,6 +24,8 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <div class="col-md-8 col-sm-8 col-xs-12">
        
+
+       
 <table class="table table-bordered">
   <tbody>
     <tr>
@@ -34,6 +36,12 @@ $this->params['breadcrumbs'][] = $this->title;
       <td class="single-first-col">Цена</td>
 	  <td><?= $prod->price?></td>
     </tr>
+    <?php if($prod->width > 0):?>
+      <tr>
+      <td class="single-first-col">Вес</td>
+    <td><?= $prod->width?></td>
+    </tr>
+  <?php endif; ?>
      <tr>
       <td class="single-first-col"> <input type="text" class="form-control" value="1" id="qty<?= $prod->id?>" /></td>
     <td> <a href="#" data-id="<?= $prod->id?>" class="btn btn-danger add-to-cart cart">

@@ -35,9 +35,9 @@ class Product extends \yii\db\ActiveRecord
         ];
     }
 
-    public static function tableName()
-    {
-        return 'product';
+    public function getInCaregory()
+    {  
+        return $this->hasOne(InCategory::className(), ['product_id' => 'id']);
     }
 
     public function getCategory(){
@@ -53,7 +53,7 @@ class Product extends \yii\db\ActiveRecord
             [['category_id', 'name', 'description', 'price', 'price_promo', 'brand'], 'required'],
             [['category_id', 'price', 'price_promo'], 'integer'],
             [['file'], 'file'], 
-            [['name', 'description', 'photo', 'brand'], 'string', 'max' => 10000],
+            [['name', 'description', 'photo', 'brand'], 'string', 'max' => 255],
       
         ];
     }

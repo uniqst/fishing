@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use app\modules\admin\models\Product;
+use app\modules\admin\models\InCategory;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -67,18 +68,18 @@ class ProductController extends Controller
     {
 
         $model = new Product();
+        $incat = new InCategory();
 
-
-        if ($model->load(Yii::$app->request->post())) {
+        if ($model->load(Yii::$app->request->post()) && $incat->load(Yii::$app->request->post())) {
             $model->file = UploadedFile::getInstance($model, 'file');
             $model->file->saveAs('upload/' . $model->file->baseName . '.' . $model->file->extension);
             $model->photo = 'upload/' . $model->file->baseName . '.' . $model->file->extension;
+
+            $incat->save();
             $model->save();
              return $this->redirect(['view', 'id' => $model->id]);
         } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
+            return $this->render('create', compact('model', 'incat'));
         }
     }
 
