@@ -13,11 +13,10 @@ $this->title = 'ABC Fishing';
             <h2 class="title text-center">Features Items</h2>
         <div class="row">
        <?php foreach($product as $prod){?>
-          <div class="col-md-3 col-sm-6 col-xs-12" style="margin-bottom: 20px;">
-               <a href="<?= Url::to(['site/single-product', 'name' => $prod->name, 'id' => $prod->id]);?>"><img class="qqq img-thumbnail"" src="<?= '/web/'.$prod->photo;?>" style="width: 100%; height: 150px;"/></a>
+          <div class="col-md-<?=$options->size_md?> col-sm-<?=$options->size_sm?> col-xs-<?=$options->size_xs?>" style="margin-bottom: 20px;">
+               <a href="<?= Url::to(['site/single-product', 'name' => $prod->name, 'id' => $prod->id]);?>"><img class="qqq img-thumbnail" src="<?= '/web/'.$prod->photo;?>" style="width: 100%; height: 150px;"/></a>
                 <a href="<?= Url::to(['site/single-product', 'name' => $prod->name, 'id' => $prod->id]);?>"><p class="text-danger text-center product-border" ><?=$prod->name?></p></a>
                 <a href="<?= Url::to(['site/single-product', 'name' => $prod->name, 'id' => $prod->id]);?>"><p class="text-success text-center product-border" ><?=$prod->price?> грн</p></a>
-
                    <a href="#" style="width: 100%; position: inline-block;" data-id="<?= $prod->id?>" class="btn btn-danger add-to-cart cart">
             <i class="glyphicon glyphicon-shopping-cart"></i>
             В корзину
@@ -29,22 +28,3 @@ $this->title = 'ABC Fishing';
         <?=LinkPager::widget(['pagination' => $pagination])?>
 </div>
            
- <!--          
- <div class="col-sm-3">
-              <div class="product-image-wrapper">
-                <div class="single-products">
-                    <div class="productinfo text-center">
-                       <a href="<?= Url::to(['site/single-product', 'name' => $prod->name, 'id' => $prod->id]);?>"><img class="qqq img-thumbnail"" src="<?= '/web/'.$prod->photo;?>" width="100%"/></a>
-                      <h2>$<?=$prod->price?></h2>
-                      <p><?=$prod->name?></p>
-        <input type="text" value="1" class="form-control" id="qty<?= $prod->id?>" style="width: 25%; position: inline-block; margin: auto;" />
-          <a href="#" style="width: 70%; position: inline-block;" data-id="<?= $prod->id?>" class="btn btn-danger add-to-cart cart">
-            <i class="glyphicon glyphicon-shopping-cart"></i>
-            Добавить в корзину
-          </a>
-                    </div>
-                
-                </div>
-            
-              </div>
-            </div> -->

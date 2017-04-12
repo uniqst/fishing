@@ -10,6 +10,8 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Category;
 use app\models\Product;
+use app\models\Pages;
+use app\models\Options;
 use app\models\Cart;
 use app\models\Qwe;
 use app\models\Ewq;
@@ -70,9 +72,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {   
+        $options = Options::find()->where(['id' => 1])->one();
         $product = Product::find();
         $pagination = new Pagination([
-            'defaultPageSize' => 9,
+            'defaultPageSize' => $options->size_product,
             'totalCount' => $product->count(),
             ]);
         $product = $product
@@ -80,7 +83,7 @@ class SiteController extends Controller
         ->limit($pagination->limit)
         ->all();
       
-        return $this->render('index', compact('product','pagination'));
+        return $this->render('index', compact('product','pagination', 'options'));
     }
 
     /**
@@ -202,6 +205,13 @@ class SiteController extends Controller
         ->limit($pagination->limit)
         ->all(); 
         return $this->render('search', compact('product', 'pagination', 'q'));
+     }
+
+     public function actionPages()
+     {
+        $alias = Yii::$app->request->get('alias');
+        $pages = Pages::find()->where(['alias' => $alias])->one();
+        return $this->render('pages', compact('pages'));
      }
     
 

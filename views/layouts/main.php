@@ -12,6 +12,7 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\models\Category;
 use app\models\Product;
+use app\models\Pages;
 use app\components\CategoryWidget;
 use app\components\MenuWidget;
 
@@ -34,7 +35,10 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<?php $qid = Yii::$app->request->get('q');?>
+<?php 
+$qid = Yii::$app->request->get('q');
+$pages = Pages::find()->all();
+?>
 <div class="wrap">
 <nav class="navbar" style="background: lightyellow; height: 130px;">
   <div class="container">
@@ -54,9 +58,9 @@ AppAsset::register($this);
    
         <ul class="nav navbar-nav navbar-right">
         <li><a href="/">Главная</a></li>
-        <li><a href="<?=Url::to(['site/spromotions'])?>">Акции</a></li>
-        <li><a href="<?=Url::to(['site/about'])?>">О магазине</a></li>
-        <li><a href="<?=Url::to(['site/contact'])?>">Контакты</a></li>
+        <?php foreach($pages as $page){?>
+        <li><a href="<?=Url::to(['site/pages', 'alias' => $page->alias])?>"><?=$page->label?></a></li>
+        <?php }?>
         <li><a href="#" class="cart" onclick="return getCart()"><i class="glyphicon glyphicon-shopping-cart" style="color: green"></i></a></li>
 
       </ul>
@@ -151,7 +155,9 @@ AppAsset::register($this);
           </form>
         </div>
         <div class="col-md-10" style="margin-top: -20px;">
-        <?= $content ?>
+        <?= $content;
+        
+         ?>
         </div>
         </div>
     </div>

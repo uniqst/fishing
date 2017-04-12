@@ -41,6 +41,7 @@ $order = Order::find()->where(['status' => '0'])->count();
         <a href="<?=Url::to(['category/index'])?>" class="btn btn-danger btn-lg">Категории</a>
         <a href="<?=Url::to(['product/index'])?>" class="btn btn-danger btn-lg">Товары</a>
         <a href="<?=Url::to(['order/index'])?>" class="btn btn-danger btn-lg"><i class="text-success glyphicon glyphicon-remove"></i><?=$order?> Заказы</a>
+        <a href="<?=Url::to(['pages/index'])?>" class="btn btn-danger btn-lg">Страницы</a>
        </div>
 <?=$content?>
 </div>
