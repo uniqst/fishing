@@ -11,7 +11,7 @@ $config = [
         'admin' => [
             'class' => 'app\modules\admin\Module',
             'layout' => 'main',
-            'defaultRoute' => 'category/index',
+            // 'defaultRoute' => 'category/index',
         ],
           'yii2images' => [
             'class' => 'rico\yii2images\Module',
@@ -62,7 +62,10 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '<alias:\w+>' => 'site/pages',
+                'login' => 'site/login',
+                'logout' => 'site/logout',
+                 '<alias:\w+>' => 'site/pages',
+
                 'page/<page:\d+>' => 'site/index',
                 'admin' => 'admin/category/index',
                 'admin/pages' => 'admin/pages/index',
@@ -71,7 +74,6 @@ $config = [
                 'site/<id:\d+>/page/<page:\d+>' => 'site/catalog',
                 'single-product/<id:\d+>/<name:\w+>' => 'site/single-product',
                 'catalog/<id:\d+>/<name:\w+>' => 'site/catalog',
-                '<action>' => 'site/<action>',
             ],
         ],
         

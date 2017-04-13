@@ -12,8 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * PagesController implements the CRUD actions for pages model.
  */
-class PagesController extends Controller
-{
+class PagesController extends AdminController{
     /**
      * @inheritdoc
      */

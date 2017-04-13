@@ -38,6 +38,7 @@ AppAsset::register($this);
 <?php 
 $qid = Yii::$app->request->get('q');
 $pages = Pages::find()->all();
+// echo Yii::$app->security->generatePasswordHash('admin');
 ?>
 <div class="wrap">
 <nav class="navbar" style="background: lightyellow; height: 130px;">
