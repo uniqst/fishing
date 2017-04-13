@@ -76,7 +76,20 @@ $pages = Pages::find()->all();
   </div><!-- /.container-fluid -->
 </nav>
 
-
+<script>
+function autoSubmit()
+{
+    var formObject = document.forms['theForm'];
+    formObject.submit();
+}
+</script>
+</head>
+<body>
+<form name='theForm' id='theForm'>
+    <input type="radio" name="sort" <?php if ($sort == 'upload_time') { ?>checked='checked' <?php } ?>value="upload_time" onChange="autoSubmit();" />Recently Uploaded
+    <input type="radio" name="sort" <?php if ($sort == 'article') { ?>checked='checked' <?php } ?> value="article" onChange="autoSubmit();" /> Alphabetically
+    <input type="radio" name="sort" <?php if ($sort == 'year') { ?>checked='checked' <?php } ?> value="year" onChange="autoSubmit();" /> Most Recent
+</form>
     <?php
     $category =$this->params['key'] ;
     ?>
@@ -86,7 +99,7 @@ $pages = Pages::find()->all();
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ])  ?>
 
-  <ul class="nav nav-pills">
+  <ul class="nav nav-pills hidden-xs">
         <?php foreach($category as $cat){?>
  <li class="dropdown btn-group ">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle btn btn-danger btn-lg">
@@ -128,6 +141,7 @@ $pages = Pages::find()->all();
           <div class="formgroup">
             <label>Вес</label>
             <select name="" class="form-control">
+              <option value="0">Все веса</option>
               <option value="">1</option>
               <option value="">2</option>
               <option value="">3</option>

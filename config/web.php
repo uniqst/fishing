@@ -65,7 +65,6 @@ $config = [
                 'login' => 'site/login',
                 'logout' => 'site/logout',
                  '/page/<alias:\w+>' => 'site/pages',
-
                 'page/<page:\d+>' => 'site/index',
                 'admin' => 'admin/category/index',
                 'admin/pages' => 'admin/pages/index',
