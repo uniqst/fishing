@@ -38,11 +38,12 @@ $order = Order::find()->where(['status' => '0'])->count();
 ?>
 <div class="container">
    <div class="btn-group btn-group-justified">
-   <a href="<?=Url::to(['/site/logout'])?>" class="btn btn-danger btn-lg">Выйти</a>
+       <a href="<?=Url::to(['/site/logout'])?>" class="btn btn-danger btn-lg"><?=\Yii::$app->user->identity->username;?> | (Выйти)</a>
         <a href="<?=Url::to(['category/index'])?>" class="btn btn-danger btn-lg">Категории</a>
         <a href="<?=Url::to(['product/index'])?>" class="btn btn-danger btn-lg">Товары</a>
         <a href="<?=Url::to(['order/index'])?>" class="btn btn-danger btn-lg"><i class="text-success glyphicon glyphicon-remove"></i><?=$order?> Заказы</a>
         <a href="<?=Url::to(['pages/index'])?>" class="btn btn-danger btn-lg">Страницы</a>
+         <a href="<?=Url::to(['options/update', 'id' => 1])?>" class="btn btn-danger btn-lg">Настройки</a>
        </div>
 <?=$content?>
 </div>

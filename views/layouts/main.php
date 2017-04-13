@@ -78,8 +78,7 @@ $pages = Pages::find()->all();
 
 
     <?php
-
-    $category = Category::find()->where(['parent_id' => '0'])->all();
+    $category =$this->params['key'] ;
     ?>
     <div class="container">
 
@@ -155,7 +154,7 @@ $pages = Pages::find()->all();
           <button type="submit" class="btn btn-success" style="width: 100%">Показать</button>
           </form>
         </div>
-        <div class="col-md-10" style="margin-top: -20px;">
+        <div class="col-md-10" >
         <?= $content;
         
          ?>

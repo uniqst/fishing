@@ -54,6 +54,8 @@ class SiteController extends Controller
      */
     public function actions()
     {
+        Yii::$app->view->params['key'] = Category::find()->where(['parent_id' => '0'])->with('product')->all();
+        Yii::$app->view->params['cateq'] = Category::find()->where(['parent_id' => $cat['id']])->all();
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',

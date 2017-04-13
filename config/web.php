@@ -11,7 +11,7 @@ $config = [
         'admin' => [
             'class' => 'app\modules\admin\Module',
             'layout' => 'main',
-            // 'defaultRoute' => 'category/index',
+            'defaultRoute' => 'category/index',
         ],
           'yii2images' => [
             'class' => 'rico\yii2images\Module',
@@ -64,7 +64,7 @@ $config = [
             'rules' => [
                 'login' => 'site/login',
                 'logout' => 'site/logout',
-                 '<alias:\w+>' => 'site/pages',
+                 '/page/<alias:\w+>' => 'site/pages',
 
                 'page/<page:\d+>' => 'site/index',
                 'admin' => 'admin/category/index',
