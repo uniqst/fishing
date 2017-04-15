@@ -15,6 +15,7 @@ use app\models\Cart;
 
 class CartController extends Controller
 {
+    public $layout = 'main2';
 
 	public function actionCartModel()
 	{

@@ -1,0 +1,4 @@
+[0414/144650.781:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\settings.dat: Отказано в доступе. (0x5)
+[0414/144650.785:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Канал был закрыт. (0x6D)
+[0414/144650.786:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\settings.dat: Отказано в доступе. (0x5)
+[0414/144650.861:ERROR:crashpad_client_win.cc(660)] crash server failed to launch, no dump captured

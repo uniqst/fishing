@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'size_product')->textInput() ?>
+    <?= $form->field($model, 'size_product')->textInput(['style' => 'max-width: 350px;', 'class' => 'form-control']) ?>
 
     <?= $form->field($model, 'size_md')->radioList(['12' => 1, '6' => 2, '4' => 3, '3' => 4]) ?>
 

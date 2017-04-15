@@ -79,7 +79,7 @@ class OrderController extends AdminController
      * @param string $id
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate()
     {
         $model = $this->findModel($id);
 
@@ -91,6 +91,29 @@ class OrderController extends AdminController
             ]);
         }
     }
+
+    public function actionStatistica()
+    {       
+            $ot = Yii::$app->request->get('ot');
+            $do = Yii::$app->request->get('do');
+            if(!empty($ot) && !empty($do)){
+                $otd = Order::find()->where('update_at <= :ot',[':ot' => $ot])->andWhere('update_at <= :do',[':do' => $do])->sum('qty');
+                $otd1 = "<h2>Подано c ".$ot." по ".$do." : ". $otd." товаров<h2>";
+            }
+            elseif (!empty($ot)){
+                $ot1 = Order::find()->where('update_at > :ot',[':ot' => $ot])->sum('qty');
+                $ot1 = "<h2>Подано с ".$ot." : ". $ot1." товаров<h2>";
+                }
+            elseif (!empty($do)){
+                $do1 = Order::find()->where('update_at < :do',[':do' => $do])->sum('qty');
+                $do1 = "<h2>Подано до ".$do." : ". $do1." товаров<h2>";
+            }
+            $day = date("Y-m-d");
+            $all = Order::find()->where(['status' => '1'])->sum('qty');
+            $today = Order::find()->where(['update_at' => $day])->sum('qty');
+            return $this->render('statistica', compact('all', 'today', 'today', 'day', 'ot', 'do','ot1', 'do1', 'otd1'));
+    }
+
 
     /**
      * Deletes an existing Order model.

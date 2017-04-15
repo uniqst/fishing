@@ -10,7 +10,7 @@ $config = [
         'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',
-            'layout' => 'main',
+            // 'layout' => 'main',
             'defaultRoute' => 'category/index',
         ],
           'yii2images' => [
@@ -24,6 +24,13 @@ $config = [
         ],
     ],
     'components' => [
+    		  'view' => [
+     		 	   'theme' => [
+             'pathMap' => [
+                '@app/views' => '@app/modules/admin/views/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
+            	 ],
+        	 ],
+    	],
         'request' => [
         'baseUrl'=> '',
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
