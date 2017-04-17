@@ -37,6 +37,14 @@ class CartController extends Controller
         return $this->render('cart-model', compact('session'));
     }
 
+     public function actionLogout()
+    {   
+
+        Yii::$app->user->logout();
+
+        return $this->goHome();
+    }
+
     public function actionClear()
     {
         $session = Yii::$app->session;

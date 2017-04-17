@@ -31,7 +31,7 @@ class CategoryController extends AdminController
         $dataProvider = new ActiveDataProvider([
             'query' => Category::find()->with('category'),
              'pagination' => [
-                'pageSize' => 20,
+                'pageSize' => 15,
                  ],
         ]);
 

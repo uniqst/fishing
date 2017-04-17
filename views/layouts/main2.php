@@ -78,12 +78,14 @@ $pages = Pages::find()->all();
     $category =$this->params['key'] ;
     ?>
     <div class="container">
-
+<!-- 
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ])  ?>
-
+        ]); 
+         ?>
+ -->
   <ul class="nav nav-pills hidden-xs">
+      <?php $category = Category::find()->where(['parent_id' => 0])->all();?>
         <?php foreach($category as $cat){?>
  <li class="dropdown btn-group ">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle btn btn-danger btn-lg">
@@ -152,7 +154,7 @@ $pages = Pages::find()->all();
           <button type="submit" class="btn btn-success" style="width: 100%">Показать</button>
           </form>
         </div>
-        <div class="col-md-10" >
+        <div class="col-md-10">
         <?= $content;
         
          ?>

@@ -20,7 +20,8 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "mihaildev/yii2-ckeditor": "*",
         "costa-rico/yii2-images": "dev-master",
-        "dmstr/yii2-adminlte-asset": "2.*"
+        "dmstr/yii2-adminlte-asset": "2.*",
+        "cybercog/yii2-google-analytics": "^0.3.2"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

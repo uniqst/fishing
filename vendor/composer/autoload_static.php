@@ -44,6 +44,7 @@ class ComposerStaticInit9f9e4e27e79990b4ee47bd62041b34f3
         ),
         'c' => 
         array (
+            'cybercog\\yii\\googleanalytics\\' => 29,
             'cebe\\markdown\\' => 14,
         ),
         'W' => 
@@ -138,6 +139,10 @@ class ComposerStaticInit9f9e4e27e79990b4ee47bd62041b34f3
         'dmstr\\' => 
         array (
             0 => __DIR__ . '/..' . '/dmstr/yii2-adminlte-asset',
+        ),
+        'cybercog\\yii\\googleanalytics\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cybercog/yii2-google-analytics/src',
         ),
         'cebe\\markdown\\' => 
         array (

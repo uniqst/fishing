@@ -4,6 +4,8 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use app\modules\admin\models\Product;
+use app\modules\admin\models\Category;
+
 use app\modules\admin\models\InCategory;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
@@ -57,14 +59,11 @@ class ProductController extends AdminController
     {
 
         $model = new Product();
-        $incat = new InCategory();
-
-        if ($model->load(Yii::$app->request->post()) && $incat->load(Yii::$app->request->post())) {
+        if ($model->load(Yii::$app->request->post())) {
             $model->file = UploadedFile::getInstance($model, 'file');
             $model->file->saveAs('upload/' . $model->file->baseName . '.' . $model->file->extension);
             $model->photo = 'upload/' . $model->file->baseName . '.' . $model->file->extension;
 
-            $incat->save();
             $model->save();
              return $this->redirect(['view', 'id' => $model->id]);
         } else {
@@ -81,14 +80,16 @@ class ProductController extends AdminController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+      
 
-        if ($model->load(Yii::$app->request->post())) {
+        if ($model->load(Yii::$app->request->post()) && $catid->load(Yii::$app->request->post())) {
 
             $model->file = UploadedFile::getInstance($model, 'file');
             $model->file->saveAs('upload/' . $model->file->baseName . '.' . $model->file->extension);
             $model->photo = 'upload/' . $model->file->baseName . '.' . $model->file->extension;
+            $catid->save();
             $model->save();
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['update', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,

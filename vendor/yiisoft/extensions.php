@@ -93,4 +93,13 @@ return array (
       '@dmstr' => $vendorDir . '/dmstr/yii2-adminlte-asset',
     ),
   ),
+  'cybercog/yii2-google-analytics' => 
+  array (
+    'name' => 'cybercog/yii2-google-analytics',
+    'version' => '0.3.2.0',
+    'alias' => 
+    array (
+      '@cybercog/yii/googleanalytics' => $vendorDir . '/cybercog/yii2-google-analytics/src',
+    ),
+  ),
 );

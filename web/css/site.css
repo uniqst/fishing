@@ -218,3 +218,33 @@ a.desc:after {
     display: inline;
     width: 50%;
 }
+
+.qqq{
+    position: relative;
+}
+
+.textimg{
+    position: absolute;
+    z-index: 1;
+    background: lightyellow;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.prod-name{
+    position: absolute;
+    z-index: 1;
+    bottom: 35px;
+    padding: 5px;
+    color: red;
+    background: lightyellow;
+    border-radius: 5px;
+}
+
+.index-item{
+   /* border: 1px solid grey; */
+    border-radius: 5px;
+    background: lightgrey;
+    padding: 5px;
+
+}

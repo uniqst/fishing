@@ -12,6 +12,8 @@ use app\models\Category;
 use app\models\Product;
 use app\models\Pages;
 use app\models\Options;
+use app\models\OrderItem;
+use app\models\Order;
 use app\models\Cart;
 use app\models\Qwe;
 use app\models\Ewq;
@@ -29,16 +31,16 @@ class SiteController extends Controller
     public function behaviors()
     {
         return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['logout'],
-                'rules' => [
-                    [
-                        'actions' => ['logout'],
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
+            // 'access' => [
+            //     'class' => AccessControl::className(),
+            //     'only' => ['logout'],
+            //     'rules' => [
+            //         [
+            //             'actions' => ['logout'],
+            //             'roles' => ['@'],
+            //         ],
+            //     ],
+            // ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -54,7 +56,15 @@ class SiteController extends Controller
     public function actions()
     {
         Yii::$app->view->params['key'] = Category::find()->where(['parent_id' => '0'])->with('product')->all();
-        Yii::$app->view->params['cateq'] = Category::find()->where(['parent_id' => $cat['id']])->all();
+
+        // $category = Category::find()->where(['parent_id' => '0'])->with('product')->all();
+        // foreach($category as $cat){
+        //    $cateq = Category::find()->where(['parent_id' => $cat['id']])->all();
+        //      foreach($cateq as $c){
+        //         $count = Product::find()->where(['category_id' => $c->id])->count();
+        //         }
+        //      }
+
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -83,7 +93,21 @@ class SiteController extends Controller
         ->offset($pagination->offset)
         ->limit($pagination->limit)
         ->all();
-      
+
+        $order = Order::find()->where(['status' => '1'])->all();
+        $top = [];
+        foreach ($order as $ord){
+            $top[] = $ord->id;
+        }
+
+        $top1 = OrderItem::find()->where(['order_id' => $top])->all();
+
+        foreach ($top1 as $top){
+            echo $top->qty_item;
+         }
+
+            
+
         return $this->render('index', compact('product','pagination', 'options'));
     }
 
@@ -94,6 +118,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        $this->layout = 'main';
 
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
@@ -114,7 +139,8 @@ class SiteController extends Controller
      * @return string
      */
     public function actionLogout()
-    {
+    {   
+
         Yii::$app->user->logout();
 
         return $this->goHome();
