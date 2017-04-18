@@ -99,16 +99,21 @@ class SiteController extends Controller
         foreach ($order as $ord){
             $top[] = $ord->id;
         }
-
-        $top1 = OrderItem::find()->where(['order_id' => $top])->all();
-
-        foreach ($top1 as $top){
-            echo $top->qty_item;
+        $top1 = [];
+        foreach ($top as $tp){
+        $t = OrderItem::find()->where(['order_id' => $tp])->all();
+        foreach ($t as $to){
+        $top1[$to->product_id] += $to->qty_item;
          }
-
-            
-
-        return $this->render('index', compact('product','pagination', 'options'));
+        }
+        $count = $top1;
+        arsort($top1);
+        $top1 = array_keys($top1);
+        $a=implode(',', $top1);
+        $top = Product::find()->where(['id' => $top1])
+        ->orderBy([new \yii\db\Expression('FIELD (id, '.$a.')')])
+        ->all();
+            return $this->render('index', compact('product','pagination', 'options', 'top', 'count'));
     }
 
     /**

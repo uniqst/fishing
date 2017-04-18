@@ -1,8 +1,6 @@
 <?php
 use yii\widgets\LinkPager;
 use yii\helpers\Url;
-
-
 /* @var $this yii\web\View */
 
 $this->title = 'ABC Fishing';
@@ -19,7 +17,9 @@ $this->title = 'ABC Fishing';
 
              <h2 class="title text-center index-item">Топ продаж</h2>
         <div class="row">
-       <?php foreach($product as $prod){
+       <?php foreach($top as $prod){
+          // echo "<div>".$count[$prod->id]."</div>";
+
          include "_product.php";
         }?>
         </div>
