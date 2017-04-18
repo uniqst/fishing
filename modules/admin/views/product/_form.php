@@ -13,13 +13,6 @@ use app\modules\admin\models\InCategory;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Product */
 /* @var $form yii\widgets\ActiveForm */
-  // $cat = $model->category_id;
-  //       $cat = Category::find()->where(['id' => $cat])->one();
-  //       $cat = $cat->parent_id;
-  //       $cat = Category::find()->where(['id' => $cat])->one();
-  //       $catid = $cat->id;
-  //       $catid = InCategory::find()->where(['category_id' => $catid])->one();
-$incat = InCategory:: find()->where(['id' => 1])->one();
 ?>
 
 <div class="product-form">
@@ -43,19 +36,28 @@ $incat = InCategory:: find()->where(['id' => 1])->one();
     <?php
         echo $form->field($model, 'description')->widget(CKEditor::className(),[
     'editorOptions' => [
-        'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
+        'preset' => 'basic', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
         'inline' => false, //по умолчанию false
     ],
 ]);
     ?>
+        <?= $form->field($model, 'price')->textInput() ?>
 
     <?= $form->field($model, 'price')->textInput() ?>
 
     <?= $form->field($model, 'price_promo')->textInput() ?>
 
-
     <?= $form->field($model, 'brand')->textInput(['maxlength' => true]) ?>
+        
+    <?
+    if (!empty($catid)){
+    foreach ($catid as $cat){
+    echo $form->field($cat, 'value')->textInput(['name' => 'value['.$cat->id.']']); 
+    }
+}
+    ?>
   
+
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

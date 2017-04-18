@@ -79,7 +79,7 @@ class OrderController extends AdminController
      * @param string $id
      * @return mixed
      */
-    public function actionUpdate()
+    public function actionUpdate($id)
     {
         $model = $this->findModel($id);
 

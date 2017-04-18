@@ -5,26 +5,25 @@ namespace app\modules\admin\models;
 use Yii;
 
 /**
- * This is the model class for table "in_category".
+ * This is the model class for table "cat_option".
  *
  * @property integer $id
- * @property integer $category_id
- * @property string $name
+ * @property integer $incat_id
  * @property string $value
  */
-class InCategory extends \yii\db\ActiveRecord
+class CatOption extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'in_category';
+        return 'cat_option';
     }
 
-    public function getCatOption()
+     public function getInCategory()
     {
-        return $this->hasOne(InCategory::className(), ['id' => 'incat_id']);
+        return $this->hasMany(CatOption::className(), ['incat_id' => 'id']);
     }
 
     /**
@@ -33,8 +32,8 @@ class InCategory extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['category_id'], 'integer'],
-            [['name', 'value'], 'string', 'max' => 255],
+            [['incat_id'], 'integer'],
+            [['value'], 'string', 'max' => 250],
         ];
     }
 
@@ -45,8 +44,7 @@ class InCategory extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'category_id' => 'Category ID',
-            'name' => 'Name',
+            'incat_id' => 'Incat ID',
             'value' => 'Value',
         ];
     }

@@ -5,7 +5,7 @@ namespace app\modules\admin\controllers;
 use Yii;
 use app\modules\admin\models\Product;
 use app\modules\admin\models\Category;
-
+use app\modules\admin\models\CatOption;
 use app\modules\admin\models\InCategory;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
@@ -57,17 +57,18 @@ class ProductController extends AdminController
 
     public function actionCreate()
     {
-
+        $catid - new InCategory();
         $model = new Product();
         if ($model->load(Yii::$app->request->post())) {
             $model->file = UploadedFile::getInstance($model, 'file');
             $model->file->saveAs('upload/' . $model->file->baseName . '.' . $model->file->extension);
             $model->photo = 'upload/' . $model->file->baseName . '.' . $model->file->extension;
 
+            // $catid->save();
             $model->save();
-             return $this->redirect(['view', 'id' => $model->id]);
+             return $this->redirect(['update', 'id' => $model->id]);
         } else {
-            return $this->render('create', compact('model', 'incat'));
+            return $this->render('create', compact('model', 'catid'));
         }
     }
 
@@ -80,19 +81,32 @@ class ProductController extends AdminController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-      
+        // $cat = $model->category_id;
+        // $cat = Category::find()->where(['id' => $cat])->one();
+        // $cat = $cat->parent_id;
+        // $cat = Category::find()->where(['id' => $cat])->one();
+        // $catid = $cat->id;
+        // $catid = InCategory::find()->where(['category_id' => $catid])->one();
 
-        if ($model->load(Yii::$app->request->post()) && $catid->load(Yii::$app->request->post())) {
-
+        $catid = CatOption::find()->where(['incat_id' => [1, 4]])->all();
+        $value = Yii::$app->request->post('value');
+        if (!empty($value)){
+        foreach($value as $key => $val){
+            $cat = CatOption::findOne($key);
+            $cat->value = $val;
+            $cat->save();
+        }
+    }
+        if ($model->load(Yii::$app->request->post())) {
             $model->file = UploadedFile::getInstance($model, 'file');
             $model->file->saveAs('upload/' . $model->file->baseName . '.' . $model->file->extension);
             $model->photo = 'upload/' . $model->file->baseName . '.' . $model->file->extension;
-            $catid->save();
             $model->save();
             return $this->redirect(['update', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'catid' => $catid,
             ]);
         }
     }

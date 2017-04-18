@@ -84,15 +84,16 @@ class SiteController extends Controller
     public function actionIndex()
     {   
         $options = Options::find()->where(['id' => 1])->one();
-        $product = Product::find();
-        $pagination = new Pagination([
-            'defaultPageSize' => $options->size_product,
-            'totalCount' => $product->count(),
-            ]);
-        $product = $product
-        ->offset($pagination->offset)
-        ->limit($pagination->limit)
-        ->all();
+        $category = Category::find()->where(['parent_id' => 0])->all();
+
+        // $pagination = new Pagination([
+        //     'defaultPageSize' => $options->size_product,
+        //     'totalCount' => $product->count(),
+        //     ]);
+        // $product = $product
+        // ->offset($pagination->offset)
+        // ->limit($pagination->limit)
+        // ->all();
 
         $order = Order::find()->where(['status' => '1'])->all();
         $top = [];
@@ -110,9 +111,14 @@ class SiteController extends Controller
         arsort($top1);
         $top1 = array_keys($top1);
         $a=implode(',', $top1);
-        $top = Product::find()->where(['id' => $top1])
+        if (count($top1) > 0){
+              $top = Product::find()->where(['id' => $top1])
         ->orderBy([new \yii\db\Expression('FIELD (id, '.$a.')')])
+        ->limit('4')
         ->all();
+        }
+        $product = Product::find()->limit('4')->all();
+
             return $this->render('index', compact('product','pagination', 'options', 'top', 'count'));
     }
 
@@ -240,12 +246,10 @@ class SiteController extends Controller
         return $this->render('search', compact('product', 'pagination', 'q'));
      }
 
-     public function actionPages()
+     public function actionPages($alias)
      {
-        $alias = Yii::$app->request->get('alias');
         $pages = Pages::find()->where(['alias' => $alias])->one();
         return $this->render('pages', compact('pages'));
      }
     
-
 }

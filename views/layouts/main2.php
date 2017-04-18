@@ -124,17 +124,7 @@ $pages = Pages::find()->all();
              <?php }?>
             </select>
           </div>
-          <div class="formgroup">
-            <label>Вес</label>
-            <select name="" class="form-control">
-              <option value="0">Все веса</option>
-              <option value="">1</option>
-              <option value="">2</option>
-              <option value="">3</option>
-              <option value="">4</option>
-              <option value="">5</option>
-            </select>
-          </div>
+         
           <div class="form-group">   
            <label>Цена</label>
            <div class="clearfix"></div>
