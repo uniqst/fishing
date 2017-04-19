@@ -34,34 +34,39 @@ use app\modules\admin\models\InCategory;
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
     <?php
-        echo $form->field($model, 'description')->widget(CKEditor::className(),[
-    'editorOptions' => [
+    echo $form->field($model, 'description')->widget(CKEditor::className(),[
+        'editorOptions' => [
         'preset' => 'basic', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
         'inline' => false, //по умолчанию false
-    ],
-]);
-    ?>
+        ],
+        ]);
+        ?>
         <?= $form->field($model, 'price')->textInput() ?>
 
-    <?= $form->field($model, 'price')->textInput() ?>
+        <?= $form->field($model, 'price')->textInput() ?>
 
-    <?= $form->field($model, 'price_promo')->textInput() ?>
+        <?= $form->field($model, 'price_promo')->textInput() ?>
 
-    <?= $form->field($model, 'brand')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'brand')->textInput(['maxlength' => true]) ?>
         
-    <?
-    if (!empty($catid)){
-    foreach ($catid as $cat){
-    echo $form->field($cat, 'value')->textInput(['name' => 'value['.$cat->id.']']); 
-    }
-}
-    ?>
-  
+        <?
+        if (!empty($catid)){
+            foreach ($catid as $cat){
+                if(!empty($cat->catOption)){
+                    echo $form->field($cat->catOption, 'value',  [
+    "template" => "<label> $cat->name</label>\n{input}\n{hint}\n{error}"
+])
+                    ->textInput(['name' => 'value['.$cat->id.']']); 
+                }
+            }
+        }
+        ?>
 
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+
+        <div class="form-group">
+            <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        </div>
+
+        <?php ActiveForm::end(); ?>
+
     </div>
-
-    <?php ActiveForm::end(); ?>
-
-</div>

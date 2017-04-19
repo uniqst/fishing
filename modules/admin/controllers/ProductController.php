@@ -12,6 +12,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
+use yii\db\ActiveQuery;
 
 /**
  * PtoductController implements the CRUD actions for Product model.
@@ -81,26 +82,30 @@ class ProductController extends AdminController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        // $cat = $model->category_id;
-        // $cat = Category::find()->where(['id' => $cat])->one();
-        // $cat = $cat->parent_id;
-        // $cat = Category::find()->where(['id' => $cat])->one();
-        // $catid = $cat->id;
-        // $catid = InCategory::find()->where(['category_id' => $catid])->one();
-
-        $catid = CatOption::find()->where(['incat_id' => [1, 4]])->all();
-        $value = Yii::$app->request->post('value');
+        $id = Yii::$app->request->get('id');
+        $product = Product::find()->where(['id' => $id])->with(['category.inCategory.catOption' => function(ActiveQuery $query){
+            $query->where(['product_id' => Yii::$app->request->get('id')]);
+        }])->one();
+        // var_dump($product->category->inCategory);  die();
+        $king = $product->category->id;
+        // var_dump($king);
+        // die();
+        // $catid = InCategory::find()->where(['category_id' => $king])->with(['catOption'])->all();
+        $catid = $product->category->inCategory;
+        $value = Yii::$app->request->post('value'); 
         if (!empty($value)){
         foreach($value as $key => $val){
-            $cat = CatOption::findOne($key);
+            $cat = CatOption::find()->where(['incat_id' => $key])->one();
             $cat->value = $val;
             $cat->save();
         }
     }
         if ($model->load(Yii::$app->request->post())) {
             $model->file = UploadedFile::getInstance($model, 'file');
+            if(!empty($model->file)){
             $model->file->saveAs('upload/' . $model->file->baseName . '.' . $model->file->extension);
             $model->photo = 'upload/' . $model->file->baseName . '.' . $model->file->extension;
+            }
             $model->save();
             return $this->redirect(['update', 'id' => $model->id]);
         } else {

@@ -24,7 +24,7 @@ class InCategory extends \yii\db\ActiveRecord
 
     public function getCatOption()
     {
-        return $this->hasOne(InCategory::className(), ['id' => 'incat_id']);
+        return $this->hasOne(CatOption::className(), ['incat_id' => 'id']);
     }
 
     /**

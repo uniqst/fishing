@@ -3,6 +3,7 @@
 namespace app\modules\admin\models;
 
 use Yii;
+use app\modules\admin\models\InCategory;
 
 /**
  * This is the model class for table "category".
@@ -23,9 +24,14 @@ class Category extends \yii\db\ActiveRecord
     }
 
 
-    public function getCategory()
+    public function getProduct()
     {
-        return $this->hasOne(Category::className(), ['id' => 'parent_id']);
+        return $this->hasOne(Product::className(), ['category_id' => 'id']);
+    }
+
+    public function getInCategory()
+    {  
+        return $this->hasMany(InCategory::className(), ['category_id' => 'id']);
     }
 
     /**
