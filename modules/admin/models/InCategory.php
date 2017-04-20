@@ -27,6 +27,7 @@ class InCategory extends \yii\db\ActiveRecord
         return $this->hasOne(CatOption::className(), ['incat_id' => 'id']);
     }
 
+
     /**
      * @inheritdoc
      */

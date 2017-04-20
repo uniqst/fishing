@@ -86,16 +86,23 @@ class ProductController extends AdminController
         $product = Product::find()->where(['id' => $id])->with(['category.inCategory.catOption' => function(ActiveQuery $query){
             $query->where(['product_id' => Yii::$app->request->get('id')]);
         }])->one();
-        // var_dump($product->category->inCategory);  die();
-        $king = $product->category->id;
-        // var_dump($king);
-        // die();
-        // $catid = InCategory::find()->where(['category_id' => $king])->with(['catOption'])->all();
+       
+      
         $catid = $product->category->inCategory;
         $value = Yii::$app->request->post('value'); 
+        $createvalue = Yii::$app->request->post('createvalue');
+        if ($createvalue){
+        foreach($createvalue as $key => $val){
+            $qwe = new CatOption();
+            $qwe->incat_id = $key;
+            $qwe->product_id = Yii::$app->request->get('id');
+            $qwe->value = $val;
+            $qwe->save();
+          }
+        }
         if (!empty($value)){
         foreach($value as $key => $val){
-            $cat = CatOption::find()->where(['incat_id' => $key])->one();
+            $cat = CatOption::find()->where(['id' => $key])->one();
             $cat->value = $val;
             $cat->save();
         }
@@ -112,6 +119,7 @@ class ProductController extends AdminController
             return $this->render('update', [
                 'model' => $model,
                 'catid' => $catid,
+                'catl' => $catl,
             ]);
         }
     }

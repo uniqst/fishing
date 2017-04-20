@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use app\modules\admin\models\Category;
+
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -22,7 +24,7 @@ $this->title = 'Категории';
              [
                 'attribute' => 'parent_id',
                 'value'     => function($data){
-                    return $data->category['name'] ? $data->category['name'] : "Нет";
+                    return $data->category->name ? $data->category->name : "Нет";
                 },
             ],
             'name',

@@ -39,9 +39,9 @@ class Product extends \yii\db\ActiveRecord
     }
 
 
-    public function getInCaregory()
+    public function getInCategory()
     {  
-        return $this->hasMany(InCategory::className(), ['product_id' => 'id']);
+        return $this->hasMany(InCategory::className(), ['category_id' => 'id']);
     }
 
    
@@ -51,7 +51,7 @@ class Product extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['category_id', 'name', 'description', 'price', 'price_promo', 'brand'], 'required'],
+            [['category_id', 'name', 'description', 'price', 'brand'], 'required'],
             [['category_id', 'price', 'price_promo'], 'integer'],
             [['file'], 'file', 'skipOnEmpty' => true], 
             [['name', 'description', 'photo', 'brand'], 'string', 'max' => 255],

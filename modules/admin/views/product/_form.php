@@ -8,6 +8,8 @@ use yii\web\UploadedFile;
 use app\modules\admin\models\Product;
 use app\modules\admin\models\Category;
 use app\modules\admin\models\InCategory;
+use app\modules\admin\models\catOption;
+
 
 
 /* @var $this yii\web\View */
@@ -43,8 +45,6 @@ use app\modules\admin\models\InCategory;
         ?>
         <?= $form->field($model, 'price')->textInput() ?>
 
-        <?= $form->field($model, 'price')->textInput() ?>
-
         <?= $form->field($model, 'price_promo')->textInput() ?>
 
         <?= $form->field($model, 'brand')->textInput(['maxlength' => true]) ?>
@@ -54,12 +54,17 @@ use app\modules\admin\models\InCategory;
             foreach ($catid as $cat){
                 if(!empty($cat->catOption)){
                     echo $form->field($cat->catOption, 'value',  [
-    "template" => "<label> $cat->name</label>\n{input}\n{hint}\n{error}"
-])
-                    ->textInput(['name' => 'value['.$cat->id.']']); 
-                }
+                "template" => "<label> $cat->name</label>\n{input}\n{hint}\n{error}"
+                    ])->textInput(['name' => 'value['.$cat->catOption->id.']']); 
+                }else{
+                $cat1 = New catOption();
+                echo $form->field($cat1, 'value',  [
+                "template" => "<label>".$cat->name."</label>\n{input}\n{hint}\n{error}"
+                    ])->textInput(['name' => 'createvalue['.$cat->id.']']); 
+               }
             }
         }
+
         ?>
 
 
